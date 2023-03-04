@@ -1,27 +1,61 @@
-# TÍTULO DO PROJETO
+#  Supergym 💪
 
-`CURSO`
+`Análise e Desenvolvimento de Sistemas`
 
-`DISCIPLINA`
+`Desenvolvimento de uma Aplicação Interativa`
 
-`SEMESTRE`
+`3º Semestre`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
-
+Um app para personais trainers enviarem seus treinos de qualquer lugar. Ainda estamos em fase de idealização do projeto, então temos apenas uma estrutura inicial.
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Bruno Roberto Olympio   
+* Guilherme Henrique
+* Gustavo Augusto
+* Rafael Jordão
+* Lúcia Raquel
+* Warlen Alves
+
 
 ## Orientador
 
-* Nome completo do professor 1
+* Mateus Curcino De Lima
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+Antes de tudo, acesse a pasta correta do [server](https://github.com/rafael-jordao/supergym/tree/main/server) 🗂️
+
+```bash
+cd server
+```
+
+Instale as dependências 📦
+
+```bash
+npm install
+```
+
+Em seguida, nós inicializaremos a aplicação utilizando o [Docker](https://www.docker.com/), então siga os comandos abaixo:
+
+```bash
+docker compose up -d
+```
+
+Serão criados 2 containers: app_supergym e db_supergym.
+
+Aplicação inicializada 🚀.
+
+## Testes unitários
+
+Para garantia de qualidade de código e menos dor de cabeça para o time de desenvolvimento, estaremos utilizando a biblioteca de testes unitários [JestJS](https://jestjs.io/pt-BR/docs/getting-started)
+
+Crie os testes dentro da pasta [__tests__](https://github.com/rafael-jordao/supergym/tree/main/server/src/__tests__) e utilize o script abaixo para realizar os testes unitários.
+
+```bash
+npm run test
+```
+
+Fique à vontade para contribuir 😉.
 
 # Documentação
 
