@@ -8,38 +8,76 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+As Personas do projeto foram construídas a partir de entrevistas individuais, suas histórias têm envolvimento tanto direto como indiretamente com o tema proposto para construção desse trabalho. Com as informações coletadas poderemos ter uma diversidade de visões no qual nos permitirá entender melhor cada usuário. Abaixo iremos relatar a história das pessoas entrevistadas.
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+**Jessica Alencar**
+<div align="left">
+<img src="https://user-images.githubusercontent.com/101758971/221326351-61e0f439-167b-49df-aef7-fa3350f54a9d.jpg" width="200px" />
+</div>
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+| Idade    | Ocupação  | Objetivo   | Dificuldades | História  | 
+|:---------------|:------------------|:---------------------|:-----------------|:-----------------|
+|26 anos | Personal traine.| Busco criar um treino de maneira mais rápida. | Levo muito tempo buscando exercícios e escrevendo-os a mão.| Trabalho em varias academias e escrever as fichas a mão me leva muito tempo.| 
+
+
+**Maria Teresa**
+<div align="left">
+<img src="https://user-images.githubusercontent.com/103081069/188247598-4753c8b8-150c-4be9-892e-2f7865af4647.jpeg" width="200px" />
+</div>
+
+| Idade    | Ocupação  | Objetivo   | Dificuldades | História  | 
+|:---------------|:------------------|:---------------------|:-----------------|:-----------------|
+|32 anos | Proprietária de academia.| Busco uma maneira de criar treinos de maneira digital.|criar um sistema exclusivo para minha academia, ficaria muito caro.|Quero reduzir o impacto ambiental gerado com as fichas de papel. 
+
+**Paulo Santos**
+<div align="left">
+<img src="https://user-images.githubusercontent.com/101758971/221717969-dbc82442-8c9f-4c1d-ab83-13cb584717a1.jpg" width="200px" />
+</div>
+
+| Idade    | Ocupação  | Objetivo   | Dificuldades | História  | 
+|:---------------|:------------------|:---------------------|:-----------------|:-----------------|
+|20 anos | Aluno de academia.| Gostaria de receber meu treino via whats app.|Tenho dificuldade de encontrar uma aplicação que me ajude com os treinos|Quero conseguir acessar o meu treino de maneira otimizada via PDF.
+
+**Joã Ricardo**
+<div align="left">
+<img src="https://user-images.githubusercontent.com/101758971/221720104-a5e982e0-c30d-4ad9-9786-fbc71b8cd827.svg" width="200px" />
+</div>
+
+| Idade    | Ocupação  | Objetivo   | Dificuldades | História  | 
+|:---------------|:------------------|:---------------------|:-----------------|:-----------------|
+|49 anos | Educador físico.| Busco uma forma de compartilhar meu treino com meus alunos.|Tenho alunos em todos os estados e levo muito tempo montando os treinos e enviando por escrito|Quero poder enviar o mesmo treino para vários alunos, asiim poupando meu tempo.
+**Maurício Varella**
+<div align="left">
+<img src="https://user-images.githubusercontent.com/103081069/188248387-c90e7c90-fc5e-4d72-90b3-457c2e0df417.png" width="200px" />
+</div>
+
+| Idade    | Ocupação  | Participação    | Motivações | Dificuldades | História |  
+|:---------------|:------------------|:---------------------|:-----------------|:-----------------|:------------------------|
+|30 anos | Streamer.| Nas horas vagas divulga o interesse de fazer serviços de faxina. | Tenho como objetivo aumentar meu patrimônio. | Tenho dificuldade de encontrar uma aplicação que me ajude a divulgar meu serviço. | Estou à procura de fazer bicos para aumentar a renda mensal.|
+
+**Tierri Lancastre**
+<div align="left">
+<img src="https://user-images.githubusercontent.com/103081069/188248480-28306035-193e-46a6-be80-77212144a877.png" width="200px" />
+</div>
+
+| Idade    | Ocupação  | Participação    | Motivações | Dificuldades | História |  
+|:---------------|:------------------|:---------------------|:-----------------|:-----------------|:------------------------|
+|50 anos | Analista de desenvolvimento de sistemas.| Sou cadeirante e estou em busca por faxineiros(as) confiáveis. | Tenho medo de contratar faxineiras sem indicação, não tenho condições de limpar a casa, preciso de alguém que seja confiável.| Encontrar faxineiros(as) em que possa confiar próximos de mim. |Tenho dificuldade de limpar minha casa por ter deficiência física.|
+
 
 ## Histórias de Usuários
 
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
+
+A partir das informações passadas pelas Personas acima, foram registradas as seguintes histórias de usuários.
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
-
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
-
+|Jessica Alencar      | criar um treino de maneira mais rápida. | Ganhar tempo ao fazer o treino. |
+|Maria teresa       | Criar treinos de maneira digital. | Reduzir o impacto ambiental gerado com as folhas. |
+|Paulo Santos      | Receber meu treino via whats app. | Acessar o treino de maneira otimizada |
+|Joã Ricardo      | Compartilhar os treinos com meus alunos  | Reduzir o tempo que levo escrevendo e enviando os treinos.|
+|Maurício Varella    | Realizar serviços de faxina em residências. | Para conseguir uma maior quantidade de capital para ter uma vida melhor. |
+|Tierri Lancastre    |Preciso que alguém faça limpeza na minha casa. | Não tenho tempo para fazer a faxina, e sou deficiente físico.  |
 ## Modelagem do Processo de Negócio 
 
 ### Análise da Situação Atual
