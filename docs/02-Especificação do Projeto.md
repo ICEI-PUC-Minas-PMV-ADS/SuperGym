@@ -48,25 +48,10 @@ As Personas do projeto foram construídas a partir de entrevistas individuais, s
 |49 anos | Educador físico.| Busco uma forma de compartilhar meu treino com meus alunos.|Tenho alunos em todos os estados e levo muito tempo montando os treinos e enviando por escrito|Quero poder enviar o mesmo treino para vários alunos, asiim poupando meu tempo.
 **Maurício Varella**
 <div align="left">
-<img src="https://user-images.githubusercontent.com/103081069/188248387-c90e7c90-fc5e-4d72-90b3-457c2e0df417.png" width="200px" />
+<img src="[https://user-images.githubusercontent.com/103081069/188248387-c90e7c90-fc5e-4d72-90b3-457c2e0df417.png](https://user-images.githubusercontent.com/103081069/188248480-28306035-193e-46a6-be80-77212144a877.png)" width="200px" />
 </div>
-
-| Idade    | Ocupação  | Participação    | Motivações | Dificuldades | História |  
-|:---------------|:------------------|:---------------------|:-----------------|:-----------------|:------------------------|
-|30 anos | Streamer.| Nas horas vagas divulga o interesse de fazer serviços de faxina. | Tenho como objetivo aumentar meu patrimônio. | Tenho dificuldade de encontrar uma aplicação que me ajude a divulgar meu serviço. | Estou à procura de fazer bicos para aumentar a renda mensal.|
-
-**Tierri Lancastre**
-<div align="left">
-<img src="https://user-images.githubusercontent.com/103081069/188248480-28306035-193e-46a6-be80-77212144a877.png" width="200px" />
-</div>
-
-| Idade    | Ocupação  | Participação    | Motivações | Dificuldades | História |  
-|:---------------|:------------------|:---------------------|:-----------------|:-----------------|:------------------------|
-|50 anos | Analista de desenvolvimento de sistemas.| Sou cadeirante e estou em busca por faxineiros(as) confiáveis. | Tenho medo de contratar faxineiras sem indicação, não tenho condições de limpar a casa, preciso de alguém que seja confiável.| Encontrar faxineiros(as) em que possa confiar próximos de mim. |Tenho dificuldade de limpar minha casa por ter deficiência física.|
-
 
 ## Histórias de Usuários
-
 
 A partir das informações passadas pelas Personas acima, foram registradas as seguintes histórias de usuários.
 
@@ -76,8 +61,7 @@ A partir das informações passadas pelas Personas acima, foram registradas as s
 |Maria teresa       | Criar treinos de maneira digital. | Reduzir o impacto ambiental gerado com as folhas. |
 |Paulo Santos      | Receber meu treino via whats app. | Acessar o treino de maneira otimizada |
 |Joã Ricardo      | Compartilhar os treinos com meus alunos  | Reduzir o tempo que levo escrevendo e enviando os treinos.|
-|Maurício Varella    | Realizar serviços de faxina em residências. | Para conseguir uma maior quantidade de capital para ter uma vida melhor. |
-|Tierri Lancastre    |Preciso que alguém faça limpeza na minha casa. | Não tenho tempo para fazer a faxina, e sou deficiente físico.  |
+
 ## Modelagem do Processo de Negócio 
 
 ### Análise da Situação Atual
