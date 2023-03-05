@@ -57,7 +57,7 @@ A partir das informações passadas pelas Personas acima, foram registradas as s
 |Jessica Alencar      | criar um treino de maneira mais rápida. | Ganhar tempo ao fazer o treino. |
 |Maria teresa       | Criar treinos de maneira digital. | Reduzir o impacto ambiental gerado com as folhas. |
 |Paulo Santos      | Receber meu treino via whats app. | Acessar o treino de maneira otimizada |
-|Joã Ricardo      | Compartilhar os treinos com meus alunos  | Reduzir o tempo que levo escrevendo e enviando os treinos.|
+|João Ricardo      | Compartilhar os treinos com meus alunos  | Reduzir o tempo que levo escrevendo e enviando os treinos.|
 
 ## Modelagem do Processo de Negócio 
 
