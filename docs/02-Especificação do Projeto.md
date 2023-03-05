@@ -48,7 +48,7 @@ As Personas do projeto foram construídas a partir de entrevistas individuais, s
 |49 anos | Educador físico.| Busco uma forma de compartilhar meu treino com meus alunos.|Tenho alunos em todos os estados e levo muito tempo montando os treinos e enviando por escrito|Quero poder enviar o mesmo treino para vários alunos, asiim poupando meu tempo.
 **Maurício Varella**
 <div align="left">
-<img src="[https://user-images.githubusercontent.com/103081069/188248387-c90e7c90-fc5e-4d72-90b3-457c2e0df417.png](https://user-images.githubusercontent.com/103081069/188248480-28306035-193e-46a6-be80-77212144a877.png)" width="200px" />
+<img src="https://user-images.githubusercontent.com/103081069/188248387-c90e7c90-fc5e-4d72-90b3-457c2e0df417.png" width="200px" />
 </div>
 
 ## Histórias de Usuários
