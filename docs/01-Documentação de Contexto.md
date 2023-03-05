@@ -24,6 +24,8 @@ Por outro lado, muitos alunos nem sempre conseguem alinhar seus horários para r
 
 ## Público-Alvo
 
+O público alvo da aplicação a ser desenvolvida são profissionais de educação física formados que trabalham como treinador pessoal (personal trainer), elaborando e supervisionando treinamentos físicos específicos para cada um de seus alunos de forma personalizada; e pessoas que desejam obter uma ficha de treinamento físico específica elaborada por seu personal trainner de forma rápida, personalizada, e de fácil compreensão e execução. Esses educadores físicos e alunos são de diferentes gêneros; condições sociais; adultos, inclusive pessoas acima de 60 anos; residentes em qualquer região do Brasil.
+
 Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
 hierárquicas, etc.
 
