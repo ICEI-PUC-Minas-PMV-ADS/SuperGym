@@ -38,18 +38,15 @@ As Personas do projeto foram construídas a partir de entrevistas individuais, s
 |:---------------|:------------------|:---------------------|:-----------------|:-----------------|
 |20 anos | Aluno de academia.| Gostaria de receber meu treino via whats app.|Tenho dificuldade de encontrar uma aplicação que me ajude com os treinos|Quero conseguir acessar o meu treino de maneira otimizada via PDF.
 
-**Joã Ricardo**
+**João Ricardo**
 <div align="left">
-<img src="https://user-images.githubusercontent.com/101758971/221720104-a5e982e0-c30d-4ad9-9786-fbc71b8cd827.svg" width="200px" />
+<img src="https://user-images.githubusercontent.com/103081069/188248387-c90e7c90-fc5e-4d72-90b3-457c2e0df417.png" width="200px" />
 </div>
 
 | Idade    | Ocupação  | Objetivo   | Dificuldades | História  | 
 |:---------------|:------------------|:---------------------|:-----------------|:-----------------|
-|49 anos | Educador físico.| Busco uma forma de compartilhar meu treino com meus alunos.|Tenho alunos em todos os estados e levo muito tempo montando os treinos e enviando por escrito|Quero poder enviar o mesmo treino para vários alunos, asiim poupando meu tempo.
-**Maurício Varella**
-<div align="left">
-<img src="https://user-images.githubusercontent.com/103081069/188248387-c90e7c90-fc5e-4d72-90b3-457c2e0df417.png" width="200px" />
-</div>
+|29 anos | Educador físico.| Busco uma forma de compartilhar meu treino com meus alunos.|Tenho alunos em todos os estados e levo muito tempo montando os treinos e enviando por escrito|Quero poder enviar o mesmo treino para vários alunos, asiim poupando meu tempo.
+
 
 ## Histórias de Usuários
 
