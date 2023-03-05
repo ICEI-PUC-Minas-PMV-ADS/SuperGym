@@ -28,7 +28,7 @@ O público alvo da aplicação a ser desenvolvida são profissionais de educaç�
 
 ## Steakholders
 
-<img src="https://user-images.githubusercontent.com/103080396/222970488-d48cf84d-4cc3-40bb-a41e-f3d118dac53d.jpg" width="200px" />
+<img src="https://user-images.githubusercontent.com/103080396/222970488-d48cf84d-4cc3-40bb-a41e-f3d118dac53d.jpg" />
 
 
 ## Referências
