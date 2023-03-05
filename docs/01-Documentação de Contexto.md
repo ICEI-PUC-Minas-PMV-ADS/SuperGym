@@ -24,18 +24,8 @@ Por outro lado, muitos alunos nem sempre conseguem alinhar seus horários para r
 
 ## Público-Alvo
 
-O público alvo da aplicação a ser desenvolvida são profissionais de educação física formados que trabalham como treinador pessoal (personal trainer), elaborando e supervisionando treinamentos físicos específicos para cada um de seus alunos de forma personalizada; e pessoas que desejam obter uma ficha de treinamento físico específica elaborada por seu personal trainner de forma rápida, personalizada, e de fácil compreensão e execução. Esses educadores físicos e alunos são de diferentes gêneros; condições sociais; adultos, inclusive pessoas acima de 60 anos; residentes em qualquer região do Brasil.
+O público alvo da aplicação a ser desenvolvida são profissionais de educação física e fisioterapeutas formados que trabalham como treinador pessoal (personal trainer) ou com a recuperação fisica de pessoas que passaram por traumas ou acidentes elaborando e supervisionando treinamentos físicos específicos para cada um de seus alunos de forma personalizada; e pessoas que desejam obter uma ficha de treinamento físico específica elaborada por seu personal trainner de forma rápida, personalizada, e de fácil compreensão e execução. Esses educadores físicos, alunos e pacientes são de diferentes gêneros; condições sociais; adultos, inclusive pessoas acima de 60 anos; residentes em qualquer região do Brasil.
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
-
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
 
 ## Referências
 
