@@ -26,6 +26,9 @@ Por outro lado, muitos alunos nem sempre conseguem alinhar seus horários para r
 
 O público alvo da aplicação a ser desenvolvida são profissionais de educação física e fisioterapeutas formados que trabalham como treinador pessoal (personal trainer) ou com a recuperação fisica de pessoas que passaram por traumas ou acidentes elaborando e supervisionando treinamentos físicos específicos para cada um de seus alunos de forma personalizada; e pessoas que desejam obter uma ficha de treinamento físico específica elaborada por seu personal trainner de forma rápida, personalizada, e de fácil compreensão e execução. Esses educadores físicos, alunos e pacientes são de diferentes gêneros; condições sociais; adultos, inclusive pessoas acima de 60 anos; residentes em qualquer região do Brasil.
 
+## Steakholders
+<img scr="https://user-images.githubusercontent.com/103080396/222970488-d48cf84d-4cc3-40bb-a41e-f3d118dac53d.jpg" width="200px" />
+
 
 ## Referências
 
