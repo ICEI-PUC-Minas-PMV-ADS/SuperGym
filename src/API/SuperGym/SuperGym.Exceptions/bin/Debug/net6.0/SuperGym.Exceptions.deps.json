@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "SuperGym.Exceptions/1.0.0": {
+        "runtime": {
+          "SuperGym.Exceptions.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SuperGym.Exceptions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
