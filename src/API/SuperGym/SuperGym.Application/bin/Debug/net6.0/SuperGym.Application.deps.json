@@ -1,0 +1,72 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "SuperGym.Application/1.0.0": {
+        "dependencies": {
+          "SuperGym.Comunication": "1.0.0",
+          "SuperGym.Domain": "1.0.0",
+          "SuperGym.Exceptions": "1.0.0",
+          "SuperGym.Infra": "1.0.0"
+        },
+        "runtime": {
+          "SuperGym.Application.dll": {}
+        }
+      },
+      "SuperGym.Comunication/1.0.0": {
+        "runtime": {
+          "SuperGym.Comunication.dll": {}
+        }
+      },
+      "SuperGym.Domain/1.0.0": {
+        "runtime": {
+          "SuperGym.Domain.dll": {}
+        }
+      },
+      "SuperGym.Exceptions/1.0.0": {
+        "runtime": {
+          "SuperGym.Exceptions.dll": {}
+        }
+      },
+      "SuperGym.Infra/1.0.0": {
+        "dependencies": {
+          "SuperGym.Domain": "1.0.0"
+        },
+        "runtime": {
+          "SuperGym.Infra.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SuperGym.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SuperGym.Comunication/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SuperGym.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SuperGym.Exceptions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SuperGym.Infra/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
