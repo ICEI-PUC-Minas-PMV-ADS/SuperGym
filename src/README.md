@@ -1,11 +1,17 @@
-# Instruções de utilização
+# Instruções de utilização 📖
 
-## Instalação do Site
+As duas pastas que temos dentro da pasta src são as duas aplicações que devem ser desenvolvidas para o nosso produto final ficar completo: a **API e o App Mobile**. 
 
-O site em HTML/CSS/JS é um projeto estático, logo pode ser utilizado tanto em servidores...
+Cada projeto funciona de forma individual, então as instruções de inicialização são diferentes para cada um deles.
 
-## Histórico de versões
+Para acessar uma pasta por linha de comando no seu terminal, rode o comando **cd** *(change directory)* e escolha a aplicação que deseja trabalhar.
 
-### [0.1.0] - DD/MM/AAAA
-#### Adicionado
-- Adicionado ...
+```bash
+cd API
+```
+
+```bash
+cd app
+```
+
+As instruções de inicialização de cada aplicação estará no seu diretório.
