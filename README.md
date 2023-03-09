@@ -42,8 +42,8 @@ Um app para personais trainers enviarem seus treinos de qualquer lugar. Ainda es
 
 # Código
 
-<li><a href="src/README.md"> Código Fonte</a></li>
+<li><a href="src"> Código Fonte</a></li>
 
 # Apresentação
 
-<li><a href="/src"> Apresentação da solução</a></li>
+<li><a href="presentation"> Apresentação da solução</a></li>
