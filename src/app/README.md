@@ -1,6 +1,35 @@
 # App Mobile 📱
 
-Antes de tudo, vale a pena dar uma lida na documentação oficial do [React Native](https://reactnative.dev/), mas aqui teremos uma breve explicação.
+## Node.js ⬢
+
+Antes de tudo, você precisa ter o [Node.js](https://nodejs.org/pt-br/) instalado em seu computador, e em seguida instalar o [Yarn](https://yarnpkg.com/), o gerenciador de pacotes que estamos utilizando.
+
+Você pode verificar se o Node.js está instalado no seu sistema digitando:
+
+```bash
+node -v
+```
+Se o Node.js estiver instalado, você verá a versão do Node.js instalada no seu sistema.
+
+Agora, para instalar o Yarn, digite:
+
+```bash
+npm install -g yarn
+```
+
+Da mesma forma que o Node.js, você pode verificar se o Yarn foi instalado corretamente:
+
+```bash
+yarn --version
+```
+
+Se o Yarn foi instalado corretamente, você verá a versão do Yarn instalada no seu sistema.
+
+Agora podemos passar para as próximas etapas.
+
+## React Native
+
+Vale a pena dar uma lida na documentação oficial do [React Native](https://reactnative.dev/), mas aqui teremos uma breve explicação.
 
 React Native é um framework de desenvolvimento de aplicativos móveis. Ele é baseado no [React](https://beta.reactjs.org/), que é uma biblioteca JavaScript para a criação de interfaces de usuário. O React Native permite que os desenvolvedores criem aplicativos móveis para iOS e Android usando JavaScript e uma única base de código, tornando o processo de desenvolvimento mais eficiente e rápido.
 
