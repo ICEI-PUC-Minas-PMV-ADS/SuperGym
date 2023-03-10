@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { View, Button } from 'react-native';
-import { ParamListBase, useNavigation } from '@react-navigation/native';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+
+import AuthContext from '../../contexts/auth';
 
 function SignIn() {
-  const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
+  const { signed, signIn } = useContext(AuthContext);
+
+  console.log(signed);
+
+  async function handleSignIn() {
+    signIn();
+  }
 
   return (
     <View style={{ flex: 1, justifyContent: 'center' }}>
-      <Button title="Voltar" onPress={() => navigation.navigate('Dashboard')} />
+      <Button title="Login" onPress={handleSignIn} />
     </View>
   );
 }
