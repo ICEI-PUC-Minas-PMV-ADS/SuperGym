@@ -1,13 +1,13 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import SignIn from '../pages/SignIn';
+import Main from '../pages/Index';
 
 const AuthStack = createNativeStackNavigator();
 
 function AuthRoutes() {
   return (
-    <AuthStack.Navigator>
-      <AuthStack.Screen name="SignIn" component={SignIn} />
+    <AuthStack.Navigator initialRouteName='Main'>
+      <AuthStack.Screen name="Main" component={Main} />
     </AuthStack.Navigator>
   );
 }

@@ -1,9 +1,6 @@
 import { useFonts } from 'expo-font';
-
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
-import { Text } from './src/components/Text';
 import { NavigationContainer } from '@react-navigation/native';
+import Routes from './src/routes/index';
 
 
 export default function App() {
@@ -19,20 +16,8 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <View style={styles.container}>
-        <Text color="#25C26E" weight="600" size={22}>Setup Inicial - Supergym</Text>
-        <Text color="#333" weight="400" size={16}>Componente de texto criado</Text>
-        <StatusBar style="auto" />
-      </View>
+      <Routes />
     </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
