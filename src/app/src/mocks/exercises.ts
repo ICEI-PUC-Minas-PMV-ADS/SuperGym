@@ -31,4 +31,4 @@ export const exercises = [
     ],
     category: '5ea80343-ae9e-447e-b30a-8496e53d90b6',
   },
-]
+];
