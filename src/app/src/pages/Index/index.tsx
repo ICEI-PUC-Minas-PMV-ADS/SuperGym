@@ -5,7 +5,7 @@ import { Text } from '../../components/Text';
 function Main() {
   return (
     <View>
-      <Text>Main</Text>
+      <Text>Estamos logados</Text>
     </View>
   );
 }
