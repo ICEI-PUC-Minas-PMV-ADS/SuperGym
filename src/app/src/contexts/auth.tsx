@@ -9,9 +9,14 @@ interface AuthContextData {
   logout(): void;
 }
 
+interface Props {
+  children: JSX.Element;
+  // any props that come into the component
+}
+
 const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 
-export function AuthProvider({ children }) {
+export function AuthProvider({ children }: Props) {
   const [user, setUser] = useState<object | null>(null);
 
   async function signIn() {
