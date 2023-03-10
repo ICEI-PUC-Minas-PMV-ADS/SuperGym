@@ -1,18 +1,15 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using SuperGym.Infra.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.AddDbContext<SuperGymDbContext>(options => 
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SuperGymConnectionString")));
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
-builder.Services.AddDbContext<SuperGymDbContext>(
-    opt => opt
-        .UseSqlServer(builder.Configuration.GetConnectionString("SuperGymConnectionString")));
 
 var app = builder.Build();
 
