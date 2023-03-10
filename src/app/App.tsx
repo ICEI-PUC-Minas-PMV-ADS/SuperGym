@@ -20,7 +20,6 @@ export default function App() {
     <View style={styles.container}>
       <Text color="#25C26E" weight="600" size={22}>Setup Inicial - Supergym</Text>
       <Text color="#333" weight="400" size={16}>Componente de texto criado</Text>
-      <Text color="#333" weight="400" size={16}>Hello world!</Text>
       <StatusBar style="auto" />
     </View>
   );
