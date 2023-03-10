@@ -9,4 +9,4 @@ export const categories = [
     name: 'Cardio',
     icon: '🫀'
   },
-]
+];
