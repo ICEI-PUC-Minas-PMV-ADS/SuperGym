@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using SuperGym.Infra;
 using SuperGym.Infra.Context;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,9 @@ builder.Services.AddDbContext<SuperGymDbContext>(options =>
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+//Injeção de Dependencias de Repositories e UnityOfWork
+builder.Services.AddRepository(builder.Configuration);
 
 var app = builder.Build();
 
