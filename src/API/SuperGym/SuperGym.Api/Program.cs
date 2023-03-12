@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using SuperGym.Application;
+using SuperGym.Application.Utils.Automapper;
 using SuperGym.Infra;
 using SuperGym.Infra.Context;
 
@@ -14,6 +16,12 @@ builder.Services.AddSwaggerGen();
 
 //Injeção de Dependencias de Repositories e UnityOfWork
 builder.Services.AddRepository(builder.Configuration);
+builder.Services.AddApplication(builder.Configuration);
+
+builder.Services.AddScoped(provider => new AutoMapper.MapperConfiguration(cfg =>
+{
+    cfg.AddProfile(new AutomapperConfiguration());
+}).CreateMapper());
 
 var app = builder.Build();
 

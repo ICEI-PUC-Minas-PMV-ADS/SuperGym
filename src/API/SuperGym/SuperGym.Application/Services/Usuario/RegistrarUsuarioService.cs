@@ -1,4 +1,4 @@
 ﻿namespace SuperGym.Application.Services.Usuario;
-public class RegistrarUsuarioService
+public class RegistrarUsuarioService : IRegistrarUsuarioService
 {
 }
