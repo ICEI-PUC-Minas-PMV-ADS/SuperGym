@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,6 +11,11 @@
     <ProjectReference Include="..\SuperGym.Domain\SuperGym.Domain.csproj" />
     <ProjectReference Include="..\SuperGym.Exceptions\SuperGym.Exceptions.csproj" />
     <ProjectReference Include="..\SuperGym.Infra\SuperGym.Infra.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.4.0" />
   </ItemGroup>
 
 </Project>

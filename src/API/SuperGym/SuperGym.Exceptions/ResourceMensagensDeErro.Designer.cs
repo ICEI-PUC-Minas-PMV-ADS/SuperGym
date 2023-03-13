@@ -59,5 +59,50 @@ namespace SuperGym.Exceptions {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O campo e-mail deve ser preenchido..
+        /// </summary>
+        public static string EMAIL_USUARIO_EMBRANCO {
+            get {
+                return ResourceManager.GetString("EMAIL_USUARIO_EMBRANCO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Digite um e-mail válido..
+        /// </summary>
+        public static string EMAIL_USUARIO_INVALIDO {
+            get {
+                return ResourceManager.GetString("EMAIL_USUARIO_INVALIDO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O campo nome deve ser preenchido..
+        /// </summary>
+        public static string NOME_USUARIO_EMBRANCO {
+            get {
+                return ResourceManager.GetString("NOME_USUARIO_EMBRANCO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O campo senha deve ser preenchido..
+        /// </summary>
+        public static string SENHA_USUARIO_EMBRANCO {
+            get {
+                return ResourceManager.GetString("SENHA_USUARIO_EMBRANCO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Digite uma senha com no mínimo seis caracteres.
+        /// </summary>
+        public static string SENHA_USUARIO_MINIMO_SEIS_CARACTERES {
+            get {
+                return ResourceManager.GetString("SENHA_USUARIO_MINIMO_SEIS_CARACTERES", resourceCulture);
+            }
+        }
     }
 }
