@@ -4,10 +4,16 @@ import { Container } from './styles';
 
 import { Text } from '../Text';
 
-export function Button() {
+interface ButtonProps {
+  children: string;
+  onPress: () => void;
+  disabled?: boolean;
+}
+
+export function Button({ children, onPress, disabled }: ButtonProps) {
   return (
-    <Container>
-      <Text weight='600' color='#fff'>Novo treino</Text>
+    <Container onPress={onPress} disabled={disabled}>
+      <Text weight='700' color='#fff'>{children}</Text>
     </Container>
   );
 }

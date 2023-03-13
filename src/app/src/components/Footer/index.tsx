@@ -8,7 +8,7 @@ export function FooterComponent() {
   return (
     <Footer>
       <FooterContainer>
-        <Button />
+        <Button onPress={() => alert('Novo Treino!')}>Novo Treino</Button>
       </FooterContainer>
     </Footer>
   );
