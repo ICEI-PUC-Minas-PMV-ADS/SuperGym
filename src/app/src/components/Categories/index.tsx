@@ -11,7 +11,9 @@ import { Category, Icon } from './styles';
 export function Categories() {
   const [selectedCategory, setSelectedCategory] = useState<string>('');
   function handleSelectCategory(id: string) {
-    setSelectedCategory(id);
+    const category = selectedCategory === id ? '' : id;
+
+    setSelectedCategory(category);
   }
 
   return (
@@ -28,10 +30,17 @@ export function Categories() {
           return (
             <Category onPress={() => handleSelectCategory(category._id)}>
               <Icon>
-                <Text opacity={isSelected ? 1 : 0.5}>{category.icon}</Text>
+                <Text
+                  opacity={isSelected ? 1 : 0.5}>
+                  {category.icon}
+                </Text>
               </Icon>
 
-              <Text size={14} weight="700">{category.name}</Text>
+              <Text
+                opacity={isSelected ? 1 : 0.5}
+                size={14} weight="700">
+                {category.name}
+              </Text>
             </Category>
           );
         }}
