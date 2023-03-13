@@ -1,6 +1,6 @@
 import styled from 'styled-components/native';
 
-export const ExerciseContainer = styled.View`
+export const ExerciseContainer = styled.TouchableOpacity`
   flex-direction: row;
   align-items: center;
 `;
