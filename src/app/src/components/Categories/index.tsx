@@ -9,6 +9,7 @@ import { Text } from '../Text';
 import { Category, Icon } from './styles';
 
 export function Categories() {
+
   return (
     <>
       <FlatList

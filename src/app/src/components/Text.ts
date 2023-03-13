@@ -5,6 +5,7 @@ interface TextProps {
   color?: string;
   size?: number;
   opacity?: number;
+
 }
 
 export const Text = styled.Text<TextProps>`

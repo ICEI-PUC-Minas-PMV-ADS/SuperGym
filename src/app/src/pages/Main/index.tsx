@@ -14,9 +14,7 @@ import {
 } from './styles';
 
 
-
 function Main() {
-
 
   return (
     <>

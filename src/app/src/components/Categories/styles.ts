@@ -14,3 +14,7 @@ export const Icon = styled.View`
   justify-content: center;
   margin-bottom: 8px;
 `;
+
+export const ButtonContainer = styled.TouchableOpacity`
+  margin-top: 24px;
+`;

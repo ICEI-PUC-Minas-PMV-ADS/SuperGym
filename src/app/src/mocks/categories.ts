@@ -9,4 +9,9 @@ export const categories = [
     name: 'Cardio',
     icon: '🫀'
   },
+  {
+    _id: 'efe67569-c408-4f4d-afa5-bdb6a0ad2d2342c',
+    name: 'Artes Marciais',
+    icon: '🥋',
+  },
 ];
