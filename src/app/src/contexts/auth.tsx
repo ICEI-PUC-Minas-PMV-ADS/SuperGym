@@ -11,7 +11,7 @@ interface AuthContextData {
   user: object | null;
   signIn(): Promise<void>;
   logout(): void;
-  loading: boolean;
+  loading: boolean | null;
 }
 
 interface Props {
@@ -22,7 +22,7 @@ const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 
 export function AuthProvider({ children }: Props) {
   const [user, setUser] = useState<object | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
+  const [loading, setLoading] = useState<boolean | null>(null);
 
   useEffect(() => {
     async function loadStorageData() {
