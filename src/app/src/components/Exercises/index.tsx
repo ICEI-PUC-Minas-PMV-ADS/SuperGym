@@ -3,9 +3,16 @@ import React from 'react';
 import { FlatList } from 'react-native';
 
 import { exercises } from '../../mocks/exercises';
+import { PlusCircle } from '../Icons/PlusCircle';
 import { Text } from '../Text';
 
-import { ExerciseContainer, Image, ExerciseDetails, Separator } from './styles';
+import {
+  ExerciseContainer,
+  Image,
+  ExerciseDetails,
+  Separator,
+  AddButton
+} from './styles';
 
 export function Exercises() {
   return (
@@ -26,6 +33,11 @@ export function Exercises() {
               <Text style={{ marginVertical: 8 }} size={14} color="#666">{exercise.description}</Text>
               <Text size={14} weight="700">{exercise.series}</Text>
             </ExerciseDetails>
+
+            <AddButton>
+              <PlusCircle />
+            </AddButton>
+
           </ExerciseContainer>
         );
       }} />
