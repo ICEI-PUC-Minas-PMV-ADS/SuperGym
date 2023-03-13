@@ -26,12 +26,12 @@ export function Exercises() {
         return (
           <ExerciseContainer>
             <Image source={{
-              uri: 'https://images.unsplash.com/photo-1532029837206-abbe2b7620e3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
+              uri: exercise.imagePath,
             }} />
             <ExerciseDetails>
               <Text color='#E89416' weight='700'>{exercise.name}</Text>
               <Text style={{ marginVertical: 8 }} size={14} color="#666">{exercise.description}</Text>
-              <Text size={14} weight="700">{exercise.series}</Text>
+              <Text size={14} weight="700"><Text size={14}>Séries: </Text>{exercise.series}</Text>
             </ExerciseDetails>
 
             <AddButton>

@@ -5,7 +5,7 @@ export const exercises = [
     description: 'Exercício para pernas e glúteos',
     series: 3,
     waitTime: '30 a 60s',
-    imagePath: '',
+    imagePath: 'https://images.unsplash.com/photo-1609899517237-77d357b047cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
     instructions: [
       'Posicione os pés na largura dos ombros',
       'Flexione os joelhos e empurre os quadris para trás',
@@ -21,7 +21,7 @@ export const exercises = [
     description: 'Exercício para o peitoral',
     series: 3,
     waitTime: '30 a 60s',
-    imagePath: '',
+    imagePath: 'https://images.unsplash.com/photo-1532029837206-abbe2b7620e3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
     instructions: [
       'Posicione os pés na largura dos ombros',
       'Flexione os joelhos e empurre os quadris para trás',
