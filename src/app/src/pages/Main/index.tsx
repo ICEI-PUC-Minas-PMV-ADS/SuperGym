@@ -2,6 +2,8 @@ import React from 'react';
 
 
 import { Header } from '../../components/Header';
+import { Categories } from '../../components/Categories';
+import { Exercises } from '../../components/Exercises';
 
 import {
   Container,
@@ -11,6 +13,8 @@ import {
   FooterContainer
 } from './styles';
 
+
+
 function Main() {
 
 
@@ -19,9 +23,13 @@ function Main() {
       <Container>
         <Header />
 
-        <CategoriesContainer></CategoriesContainer>
+        <CategoriesContainer>
+          <Categories />
+        </CategoriesContainer>
 
-        <ExercisesContainer></ExercisesContainer>
+        <ExercisesContainer>
+          <Exercises />
+        </ExercisesContainer>
       </Container>
 
       <Footer>
