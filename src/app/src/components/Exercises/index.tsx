@@ -5,7 +5,6 @@ import { FlatList } from 'react-native';
 import { exercises } from '../../mocks/exercises';
 import { PlusCircle } from '../Icons/PlusCircle';
 import { Text } from '../Text';
-
 import {
   ExerciseContainer,
   Image,
@@ -33,11 +32,9 @@ export function Exercises() {
               <Text style={{ marginVertical: 8 }} size={14} color="#666">{exercise.description}</Text>
               <Text size={14} weight="700"><Text size={14}>Séries: </Text>{exercise.series}</Text>
             </ExerciseDetails>
-
             <AddButton>
               <PlusCircle />
             </AddButton>
-
           </ExerciseContainer>
         );
       }} />
