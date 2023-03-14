@@ -61,6 +61,15 @@ namespace SuperGym.Exceptions {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to O e-mail informado já existe em nossa base de dados..
+        /// </summary>
+        public static string EMAIL_JA_CADASTRADO {
+            get {
+                return ResourceManager.GetString("EMAIL_JA_CADASTRADO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to O campo e-mail deve ser preenchido..
         /// </summary>
         public static string EMAIL_USUARIO_EMBRANCO {
