@@ -12,7 +12,7 @@ export const Icon = styled.View`
   background: #fff;
   width: 44px;
   height: 44px;
-  border-radius: 50%;
+  border-radius: 24px;
   align-items: center;
   justify-content: center;
   margin-bottom: 8px;
