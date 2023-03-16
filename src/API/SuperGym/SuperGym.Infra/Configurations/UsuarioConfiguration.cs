@@ -13,6 +13,6 @@ public class UsuarioConfiguration : IEntityTypeConfiguration<Usuario>
 
         builder.Property(u => u.Nome).IsRequired().HasMaxLength(100);
         builder.Property(u => u.Email).IsRequired().HasMaxLength(50);
-        builder.Property(u => u.Senha).IsRequired().HasMaxLength(50);
+        builder.Property(u => u.Senha).IsRequired();
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SuperGym.Application.Services.Usuario;
+using SuperGym.Application.Utils.Criptografia;
 using SuperGym.Application.Utils.Token;
 
 namespace SuperGym.Application;
@@ -8,6 +9,7 @@ public static class Bootstrapper
 {
     public static void AddApplication(this IServiceCollection services, IConfiguration configuration)
     {
+        AdicionarChaveAdiconalSenha(services, configuration);
         AdicionarTokenJWT(services, configuration);
         AdicionarServices(services);
     }
@@ -25,4 +27,12 @@ public static class Bootstrapper
 
         services.AddScoped(option => new TokenController(int.Parse(sectionTempoDeVida.Value), sectionKey.Value));
     }
+
+    private static void AdicionarChaveAdiconalSenha(IServiceCollection services, IConfiguration configuration)
+    {
+        var section = configuration.GetRequiredSection("Configuracoes:ChaveAdicionalSenha");
+
+        services.AddScoped(option => new EncriptadorDeSenha(section.Value));
+    }
+
 }

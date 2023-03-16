@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SuperGym.Domain.Repositories;
+using SuperGym.Domain.Repositories.Usuario;
+using SuperGym.Infra.Repositories;
 
 namespace SuperGym.Infra;
 public static class Bootstrapper
@@ -18,8 +20,9 @@ public static class Bootstrapper
 
     private static void AddRepositories(IServiceCollection services)
     {
-        //services
-            //.AddScoped<IUsuarioReadOnlyRepository, UsuarioRepository>()
+        services
+            .AddScoped<IUsuarioReadOnlyRepository, UsuarioRepository>()
+            .AddScoped<IUsuarioWriteOnlyRepository, UsuarioRepository>();
 
     }
 

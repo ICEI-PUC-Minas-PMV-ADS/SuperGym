@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
+using SuperGym.Api.Filtros;
 using SuperGym.Application;
 using SuperGym.Application.Utils.Automapper;
 using SuperGym.Infra;
@@ -7,7 +7,9 @@ using SuperGym.Infra.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<SuperGymDbContext>(options => 
+builder.Services.AddRouting(option => option.LowercaseUrls = true);
+
+builder.Services.AddDbContext<SuperGymDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("SuperGymConnectionString")));
 
 builder.Services.AddControllers();
@@ -17,6 +19,8 @@ builder.Services.AddSwaggerGen();
 //Injeção de Dependencias de Repositories e UnityOfWork
 builder.Services.AddRepository(builder.Configuration);
 builder.Services.AddApplication(builder.Configuration);
+
+builder.Services.AddMvc(options => options.Filters.Add(typeof(FiltroDasExceptions)));
 
 builder.Services.AddScoped(provider => new AutoMapper.MapperConfiguration(cfg =>
 {
