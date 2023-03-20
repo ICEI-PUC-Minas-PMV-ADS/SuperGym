@@ -126,6 +126,9 @@
   <data name="EMAIL_USUARIO_INVALIDO" xml:space="preserve">
     <value>Digite um e-mail válido.</value>
   </data>
+  <data name="LOGIN_INVALIDO" xml:space="preserve">
+    <value>Usuaro e/ou senha inválido.</value>
+  </data>
   <data name="NOME_USUARIO_EMBRANCO" xml:space="preserve">
     <value>O campo nome deve ser preenchido.</value>
   </data>
