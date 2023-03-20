@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 
 import { Header } from '../../components/Header';
 import { FooterComponent } from '../../components/Footer';
@@ -12,13 +11,28 @@ import {
   ExercisesContainer,
 } from './styles';
 
+import { Button } from '../../components/Button';
+import ClientNameModal from '../../components/ClientNameModal';
+
 
 function Main() {
+  const [isNameModalVisible, setisNameModalVisible] = useState(false);
+  const [selectedName, setSelectedName] = useState('');
+
+  function handleSaveName(name: string) {
+    setSelectedName(name);
+  }
+
+  function handleCancelTraining() {
+    setSelectedName('');
+  }
 
   return (
     <>
       <Container>
-        <Header />
+        <Header
+          selectedName={selectedName}
+          onCancelTraining={handleCancelTraining} />
 
         <CategoriesContainer>
           <Categories />
@@ -29,7 +43,14 @@ function Main() {
         </ExercisesContainer>
       </Container>
 
-      <FooterComponent />
+      <FooterComponent>
+        {!selectedName && (<Button onPress={() => setisNameModalVisible(true)}>Novo Treino</Button>)}
+      </FooterComponent>
+
+      <ClientNameModal
+        onClose={() => setisNameModalVisible(false)}
+        visible={isNameModalVisible}
+        onSave={handleSaveName} />
     </>
 
   );
