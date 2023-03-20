@@ -3,7 +3,7 @@ import React from 'react';
 import { Footer, FooterContainer } from './styles';
 
 interface FooterProps {
-  children: JSX.Element;
+  children: JSX.Element | boolean;
 
 }
 

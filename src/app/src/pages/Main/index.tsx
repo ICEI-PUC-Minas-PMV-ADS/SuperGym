@@ -17,6 +17,11 @@ import ClientNameModal from '../../components/ClientNameModal';
 
 function Main() {
   const [isNameModalVisible, setisNameModalVisible] = useState(false);
+  const [selectedName, setSelectedName] = useState('');
+
+  function handleSaveName(name: string) {
+    setSelectedName(name);
+  }
 
   return (
     <>
@@ -33,12 +38,13 @@ function Main() {
       </Container>
 
       <FooterComponent>
-        <Button onPress={() => setisNameModalVisible(true)}>Novo Treino</Button>
+        {!selectedName && (<Button onPress={() => setisNameModalVisible(true)}>Novo Treino</Button>)}
       </FooterComponent>
 
       <ClientNameModal
         onClose={() => setisNameModalVisible(false)}
-        visible={isNameModalVisible} />
+        visible={isNameModalVisible}
+        onSave={handleSaveName} />
     </>
 
   );

@@ -9,10 +9,16 @@ import { Overlay, ModalBody, ModalHeader, Form, Input } from './styles';
 interface ClientNameModal {
   visible: boolean;
   onClose: () => void;
+  onSave: (name: string) => void;
 }
 
-function ClientNameModal({ visible, onClose }: ClientNameModal) {
+function ClientNameModal({ visible, onClose, onSave }: ClientNameModal) {
   const [name, setName] = useState('');
+
+  function handleSave() {
+    onSave(name);
+    onClose();
+  }
 
   return (
     <Modal
@@ -36,7 +42,9 @@ function ClientNameModal({ visible, onClose }: ClientNameModal) {
               placeholderTextColor="#666"
               onChangeText={setName} />
 
-            <Button disabled={name.length === 0} onPress={() => alert(name)}>Salvar</Button>
+            <Button
+              disabled={name.length === 0}
+              onPress={handleSave}>Salvar</Button>
           </Form>
 
         </ModalBody>
