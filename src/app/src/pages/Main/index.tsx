@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 
 import { Header } from '../../components/Header';
 import { FooterComponent } from '../../components/Footer';
@@ -17,11 +16,11 @@ import ClientNameModal from '../../components/ClientNameModal';
 
 
 function Main() {
+  const [isNameModalVisible, setisNameModalVisible] = useState(false);
 
   return (
     <>
       <Container>
-        <ClientNameModal />
         <Header />
 
         <CategoriesContainer>
@@ -34,10 +33,12 @@ function Main() {
       </Container>
 
       <FooterComponent>
-        <Button onPress={() => alert('Novo Treino!')}>Novo Treino</Button>
+        <Button onPress={() => setisNameModalVisible(true)}>Novo Treino</Button>
       </FooterComponent>
 
-
+      <ClientNameModal
+        onClose={() => setisNameModalVisible(false)}
+        visible={isNameModalVisible} />
     </>
 
   );
