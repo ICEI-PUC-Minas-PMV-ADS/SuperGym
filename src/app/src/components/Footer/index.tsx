@@ -2,14 +2,17 @@ import React from 'react';
 
 import { Footer, FooterContainer } from './styles';
 
-import { Button } from '../Button';
+interface FooterProps {
+  children: JSX.Element;
 
-export function FooterComponent() {
+}
+
+export function FooterComponent({ children }: FooterProps) {
 
   return (
     <Footer>
       <FooterContainer>
-        <Button onPress={() => alert('Novo Treino!')}>Novo Treino</Button>
+        {children}
       </FooterContainer>
     </Footer>
   );

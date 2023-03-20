@@ -12,12 +12,16 @@ import {
   ExercisesContainer,
 } from './styles';
 
+import { Button } from '../../components/Button';
+import ClientNameModal from '../../components/ClientNameModal';
+
 
 function Main() {
 
   return (
     <>
       <Container>
+        <ClientNameModal />
         <Header />
 
         <CategoriesContainer>
@@ -29,7 +33,11 @@ function Main() {
         </ExercisesContainer>
       </Container>
 
-      <FooterComponent />
+      <FooterComponent>
+        <Button onPress={() => alert('Novo Treino!')}>Novo Treino</Button>
+      </FooterComponent>
+
+
     </>
 
   );
