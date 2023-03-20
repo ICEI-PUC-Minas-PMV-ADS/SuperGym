@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SuperGym.Application.Services.Login;
 using SuperGym.Application.Services.Usuario;
 using SuperGym.Application.Utils.Criptografia;
 using SuperGym.Application.Utils.Token;
@@ -17,7 +18,8 @@ public static class Bootstrapper
     private static void AdicionarServices(IServiceCollection services)
     {
         services
-            .AddScoped<IRegistrarUsuarioService, RegistrarUsuarioService>();
+            .AddScoped<IRegistrarUsuarioService, RegistrarUsuarioService>()
+            .AddScoped<ILoginService, LoginService>();
     }
 
     private static void AdicionarTokenJWT(IServiceCollection services, IConfiguration configuration)
