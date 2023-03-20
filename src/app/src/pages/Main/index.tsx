@@ -23,10 +23,16 @@ function Main() {
     setSelectedName(name);
   }
 
+  function handleCancelTraining() {
+    setSelectedName('');
+  }
+
   return (
     <>
       <Container>
-        <Header />
+        <Header
+          selectedName={selectedName}
+          onCancelTraining={handleCancelTraining} />
 
         <CategoriesContainer>
           <Categories />

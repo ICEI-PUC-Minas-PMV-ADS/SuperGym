@@ -16,6 +16,7 @@ function ClientNameModal({ visible, onClose, onSave }: ClientNameModal) {
   const [name, setName] = useState('');
 
   function handleSave() {
+    setName('');
     onSave(name);
     onClose();
   }
