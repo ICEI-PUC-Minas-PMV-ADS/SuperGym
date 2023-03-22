@@ -88,6 +88,15 @@ namespace SuperGym.Exceptions {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Usuaro e/ou senha inválido..
+        /// </summary>
+        public static string LOGIN_INVALIDO {
+            get {
+                return ResourceManager.GetString("LOGIN_INVALIDO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to O campo nome deve ser preenchido..
         /// </summary>
         public static string NOME_USUARIO_EMBRANCO {
