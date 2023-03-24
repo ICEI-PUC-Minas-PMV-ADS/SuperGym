@@ -27,7 +27,7 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas d
 ![Login](img/02-Wireframe-Login.png)
 ![Home](img/03-Wireframe-Home.png)
 ![ExeSelecionar](img/04-Wireframe-Exercicio-Selecionar.png)
-![ModalNomeAluno](img/05-Modal - Nome do Aluno.png)
+![ModalNomeAluno](img/05-Wireframe-ModalNomeAluno.png)
 ![ExercicioSelecionado](img/06-Wireframe-Exercicio-Selecionado.png)
 ![DetalhesExercicio](img/07-Wireframe-DetalhesDoExercicio.png)
 ![TreinoConfirmado](img/08-Wireframe-Treino-Finalizado.png)
