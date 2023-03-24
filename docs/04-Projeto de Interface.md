@@ -23,6 +23,14 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas d
 ## Wireframes
 
 ![Index](img/00-Wireframe-Index.png)
+![Cadastro](img/01-Wireframe-Cadastro.png)
+![Login](img/02-Wireframe-Login.png)
+![Home](img/03-Wireframe-Home.png)
+![ExervicioSelecionar](img/04-Wireframe-Exercício - Selecionar.png)
+![ModalNomeAluno](img/05-Modal - Nome do Aluno.png)
+![ExercicioSelecionado](img/06-Wireframe-Exercício - Selecionado.png)
+![DetalhesExercicio](img/07-Wireframe-Detalhes do Exercício.png)
+![TreinoConfirmado](img/08-Wireframe-Treino confirmado.png)
 
 São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
  
