@@ -10,4 +10,4 @@ As referências abaixo irão auxiliá-lo na geração do artefato "Plano de Test
 > - [Planejando testes de usabilidade: o que (e o que não) fazer | iMasters](https://imasters.com.br/design-ux/planejando-testes-de-usabilidade-o-que-e-o-que-nao-fazer/)
 > - [Ferramentas de Testes de Usabilidade](https://www.usability.gov/how-to-and-tools/resources/templates.html)
 
-<img src=https://www.figma.com/file/nBudBVVuNTNL6sRZGmkv5R/SuperGym?node-id=6-2&t=i7M2jMj0nrTgc2PM-4>
+<img src="https://www.figma.com/file/nBudBVVuNTNL6sRZGmkv5R/SuperGym?node-id=6-2&t=i7M2jMj0nrTgc2PM-4" />
