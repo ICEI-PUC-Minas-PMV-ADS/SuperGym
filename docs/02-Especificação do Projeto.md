@@ -64,7 +64,7 @@ A partir das informações passadas pelas Personas acima, foram registradas as s
 ### Análise da Situação Atual
 
 
-Nossa proposta é a criação de uma plataforma onde viabilize a criação de treinos personalizados e exclusvivos feito por profissionais da área para seus respectivos alunos, Vendo que um grande problema enfrentado hoje, é o grande impacto que a geração de papel impacta o ambiente, pensando nisso criamos a ideia de tornar essa ficha digital economizando papel e poluindo menos o meio ambiente.
+Nossa proposta é a criação de uma plataforma onde viabilize a criação de treinos personalizados e exclusvivos feito por profissionais da área para seus respectivos alunos, Vendo que um grande problema enfrentado hoje, é o grande impacto que a geração de papel tem feito ao meio ambiente, pensando nisso criamos a ideia de tornar essa ficha digital economizando papel e poluindo menos o meio ambiente.
 
 
 ### Descrição Geral da Proposta
@@ -76,7 +76,7 @@ A aplicação visa a criação de uma plataforma para a montagem de treinos de m
 
 Esse diagrama representa a interação anterior a chegada até a aplicação.
 
-![Processo 1](img/BPMN1.svg) 
+![Processo 1](img/1diagrama.svg) 
 
 ### Processo 2 – PROCESSO CRIAÇÃO FICHA
 
