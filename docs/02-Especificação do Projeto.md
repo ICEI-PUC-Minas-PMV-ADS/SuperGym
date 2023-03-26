@@ -69,18 +69,18 @@ Nossa proposta é a criação de uma plataforma onde viabilize a criação de tr
 
 ### Descrição Geral da Proposta
 
-Nossa aplicação visa a criação de uma plataforma para a montagem de treinos de maneira digital, as possiveis melhorias são a implementação de outros tipos de treinos como: Funcional,Aerobico, Lutas entre outros.
+A aplicação visa a criação de uma plataforma para a montagem de treinos de maneira digital, as possiveis melhorias são a implementação de outros tipos de treinos como: Funcional,Aerobico, Lutas entre outros.
 
 
 ### Processo 1 – INTERAÇÃO ACADEMIA
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
+Esse diagrama representa a interação anterior a chegada até a aplicação.
 
 ![Processo 1](img/BPMN1.svg) 
 
 ### Processo 2 – PROCESSO CRIAÇÃO FICHA
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
+Esse diagrama representa a interação e os procesos executados dentro da plataforma.
 
 ![Processo 2](img/diagram.svg)
 
