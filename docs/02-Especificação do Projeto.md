@@ -73,7 +73,7 @@ Apresente aqui uma descrição da sua proposta abordando seus limites e suas lig
 
 Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
 
-![Processo 1](img/02-bpmn-proc1.png)
+![Processo 1](img/diagram.svg)
 
 ### Processo 2 – NOME DO PROCESSO
 
