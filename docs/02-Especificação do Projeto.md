@@ -63,23 +63,26 @@ A partir das informações passadas pelas Personas acima, foram registradas as s
 
 ### Análise da Situação Atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+
+Nossa proposta é a criação de uma plataforma onde viabilize a criação de treinos personalizados e exclusvivos feito por profissionais da área para seus respectivos alunos, Vendo que um grande problema enfrentado hoje, é o grande impacto que a geração de papel impacta o ambiente, pensando nisso criamos a ideia de tornar essa ficha digital economizando papel e poluindo menos o meio ambiente.
+
 
 ### Descrição Geral da Proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+Nossa aplicação visa a criação de uma plataforma para a montagem de treinos de maneira digital, as possiveis melhorias são a implementação de outros tipos de treinos como: Funcional,Aerobico, Lutas entre outros.
 
-### Processo 1 – NOME DO PROCESSO
+
+### Processo 1 – INTERAÇÃO ACADEMIA
 
 Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
 
-![Processo 1](img/diagram.svg)
+![Processo 1](img/diagram (1).svg) 
 
-### Processo 2 – NOME DO PROCESSO
+### Processo 2 – PROCESSO PLATAFORMA
 
 Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
 
-![Processo 2](img/02-bpmn-proc2.png)
+![Processo 2](img/diagram.svg)
 
 ## Indicadores de Desempenho
 
