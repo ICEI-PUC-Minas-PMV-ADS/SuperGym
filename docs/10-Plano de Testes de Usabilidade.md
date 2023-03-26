@@ -4,8 +4,8 @@ O teste de usabilidade permite avaliar a qualidade da interface com o usuário d
 
 
 
-<img src="https://user-images.githubusercontent.com/103080396/227782232-7f8d2bc3-df43-4e97-ab0f-b099fef496bd.jpg" width="100px"/> 
-### Tela 1 Index
+<img src="https://user-images.githubusercontent.com/103080396/227782232-7f8d2bc3-df43-4e97-ab0f-b099fef496bd.jpg" width="400px"/> 
+## Tela 1 Index
 Caso de Teste 1: Teste de usabilidade do botão LOGIN/CADASTRO.
 Objetivo: O botão deve redirecionar o usuário para uma tela onde ele possa efetuar o login ou o cadastro dele na aplicação.
 
