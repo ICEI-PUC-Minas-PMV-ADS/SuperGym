@@ -11,8 +11,6 @@ O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema 
 
 ![Diagrama_Fluxo](img/fluxo_telas.jpeg)
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas de Fluxo”.
-
 ## Wireframes
 
 ![Index](img/00-Wireframe-Index.png)
