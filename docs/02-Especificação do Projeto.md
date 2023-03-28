@@ -10,42 +10,31 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 As Personas do projeto foram construídas a partir de entrevistas individuais, suas histórias têm envolvimento tanto direto como indiretamente com o tema proposto para construção desse trabalho. Com as informações coletadas poderemos ter uma diversidade de visões no qual nos permitirá entender melhor cada usuário. Abaixo iremos relatar a história das pessoas entrevistadas.
 
-**Jessica Alencar**
-<div align="left">
-<img src="https://user-images.githubusercontent.com/101758971/221326351-61e0f439-167b-49df-aef7-fa3350f54a9d.jpg" width="200px" />
-</div>
 
-| Idade    | Ocupação  | Objetivo   | Dificuldades | História  | 
-|:---------------|:------------------|:---------------------|:-----------------|:-----------------|
-|26 anos | Personal traine.| Busco criar um treino de maneira mais rápida. | Levo muito tempo buscando exercícios e escrevendo-os a mão.| Trabalho em varias academias e escrever as fichas a mão me leva muito tempo.| 
+|    Jessica Alencar | Informações:                       |                                        |
+|--------------------|------------------------------------|----------------------------------------|
+|<img src="img/jessicaalencar.jpg" width = 250>| **Idade:** 26 anos <br> **Ocupação:** Personal traine|**Aplicativos:**<br><ul>● Instagram <br>● Linkedin <br>● Telegram<br>● WhatsApp <br></ul>|
+|**Motivações:**<br><ul>● Criação treino facilitado. <br><br>● Ganho tempo. </ul>|**Frustrações:**<br><ul>● Muito tempo é perdido; <br><br>● Levo muito tempo buscando exercícios e escrevendo-os a mão.   |**Hobbies/Histórias:**<br><ul>● Preciso de mais tempo livre <br>● Levo muito tempo escrevendo exercicio <br>● Levo muito tempo buscando exercicio <br></ul>|
 
 
-**Maria Teresa**
-<div align="left">
-<img src="https://user-images.githubusercontent.com/103081069/188247598-4753c8b8-150c-4be9-892e-2f7865af4647.jpeg" width="200px" />
-</div>
+|   Maria Teresa | Informações:                       |                                        |
+|--------------------|------------------------------------|----------------------------------------|
+|<img src="img/imagem-maria.jpg" width = 250>| **Idade:** 32 anos <br> **Ocupação:** Proprietária de academia|**Aplicativos:**<br><ul>● Instagram <br>● Linkedin <br>● Telegram<br>● WhatsApp <br></ul>|
+|**Motivações:**<br><ul>● Criação treino maneira digital. <br><br>● criar sistema exclusivo. </ul>|**Frustrações:**<br><ul>● Custo projeto; <br><br>● impacto ambiental fichas de papel.   |**Hobbies/Histórias:**<br><ul>● Ambientalista <br>● Reduzir o impacto ambiental <br>● Academia sustentavel <br></ul>|
 
-| Idade    | Ocupação  | Objetivo   | Dificuldades | História  | 
-|:---------------|:------------------|:---------------------|:-----------------|:-----------------|
-|32 anos | Proprietária de academia.| Busco uma maneira de criar treinos de maneira digital.|criar um sistema exclusivo para minha academia, ficaria muito caro.|Quero reduzir o impacto ambiental gerado com as fichas de papel. 
 
-**Paulo Santos**
-<div align="left">
-<img src="https://user-images.githubusercontent.com/101758971/221717969-dbc82442-8c9f-4c1d-ab83-13cb584717a1.jpg" width="200px" />
-</div>
+|   Paulo Santos | Informações:                       |                                        |
+|--------------------|------------------------------------|----------------------------------------|
+|<img src="img/imagem-paulo.jpg" width = 250>| **Idade:** 20 anos <br> **Ocupação:** Aluno de academia|**Aplicativos:**<br><ul>● Instagram <br>● Linkedin <br>● Telegram<br>● WhatsApp <br></ul>|
+|**Motivações:**<br><ul>● Receber treino no celular. <br><br>● Praticidade. </ul>|**Frustrações:**<br><ul>● Encontrar uma aplicação; <br><br>● Perco minha ficha direto.   |**Hobbies/Histórias:**<br><ul>● Musculação <br>● Corrida <br>● Natação <br></ul>|
 
-| Idade    | Ocupação  | Objetivo   | Dificuldades | História  | 
-|:---------------|:------------------|:---------------------|:-----------------|:-----------------|
-|20 anos | Aluno de academia.| Gostaria de receber meu treino via whats app.|Tenho dificuldade de encontrar uma aplicação que me ajude com os treinos|Quero conseguir acessar o meu treino de maneira otimizada via PDF.
 
-**João Ricardo**
-<div align="left">
-<img src="https://user-images.githubusercontent.com/103081069/188248387-c90e7c90-fc5e-4d72-90b3-457c2e0df417.png" width="200px" />
-</div>
 
-| Idade    | Ocupação  | Objetivo   | Dificuldades | História  | 
-|:---------------|:------------------|:---------------------|:-----------------|:-----------------|
-|29 anos | Educador físico.| Busco uma forma de compartilhar meu treino com meus alunos.|Tenho alunos em todos os estados e levo muito tempo montando os treinos e enviando por escrito|Quero poder enviar o mesmo treino para vários alunos, asiim poupando meu tempo.
+|   João Ricardo | Informações:                       |                                        |
+|--------------------|------------------------------------|----------------------------------------|
+|<img src="img/imagem-joao.jpg" width = 250>| **Idade:** 29 anos <br> **Ocupação:** Educador físico|**Aplicativos:**<br><ul>● Instagram <br>● Linkedin <br>● Telegram<br>● WhatsApp <br></ul>|
+|**Motivações:**<br><ul>● Quero compartilhar meus treinos. <br><br>● Otimizar meu tempo. </ul>|**Frustrações:**<br><ul>● Levo muito tempo escrevendo fichas; <br><br>● Excesso papel na mochila.   |**Hobbies/Histórias:**<br><ul>● Tenho alunos de outros estados <br>● Preciso enviar o mesmo treino para varios alunos <br>● Quero evoluir a forma como se faz fichas de treino <br></ul>|
+
 
 
 ## Histórias de Usuários
@@ -86,12 +75,16 @@ Esse diagrama representa a interação e os procesos executados dentro da plataf
 
 ## Indicadores de Desempenho
 
-Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores. 
 
-Usar o seguinte modelo: 
+| # | Indicador |  Objetivos| Descrição |Cálculo | Fonte | Perspectiva |
+|---|-|---------- |---------|-|--------|-------|
+|001| Número de personais traine cadastrados| Promover maior numero de usuarios da plataforma |Contabilizar a média de usuarios com base no número de novos usuarios cadastrados| Média de novosusuarios| Banco de dados do projeto | Aumentar usuarios da plataforma|
+|002| Número de treinos cadastrados | avaliar a quantidade de treinos que estão sendo efetivados |Calcular porcentagem de treinos finalizados e não finalizados | Quantidade de treinos criados vs treinos não finalizados  | Banco de dados do projeto | Conter uma taxa de finalizações maiores que não finalizados|   
+|003| Taxa de reclamações de falhas na aplicação | Avaliar quantitativamente as falhas decorrentes da aplicação | Porcentagem de reclamações com relação as falhas na aplicação  | Número de reclamaçoes/ número de usuarios *100  | Tabela reclamações  | Aprendizado e melhorias |  
+|004| Número de downloads  | Aumentar a taxa de crescimento da aplicação  | Avaliar a taxa de downloads realizados   | Média do número de downloads por mês  | Estátisticas fornecidas pela Playstore/AppleStore | Aumentar a taxa de crescimento do app 10% ao mês   |  
+|005| Número de desinstalações do aplicativo | Diminuir o  número de desinstalações | Avaliar o que precisa ser mudado no Aplicativo para evitar futuras desinstalações | Média do número de desinstalações realizadas por mês  | Estátisticas fornecidas pela Playstore/AppleStore | Diminuir  o número de desinstalações em 20%.  |   
+|006| Nota do Aplicativo  | Aumentar a nota de satisfação do usuário | Verificar a nota do App exibida aos usuários  | Calculada com base nas notas mais recente  | Estátisticas fornecidas pela Playstore/AppleStore | Aumentar a nota do Aplicativo para 5 estrelas.  |   
 
-![Indicadores de Desempenho](img/02-indic-desemp.png)
-Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe a ser apresentado a posteriori. 
 
 ## Requisitos
 
@@ -129,15 +122,15 @@ A tabela a seguir apresenta os requisitos do App Mobile, identificando a priorid
 |------|-----------------------------------------|----|
 |RF-001| O aplicativo deve ser capaz de funcionar em diferentes sistemas operacionais móveis (Android, iOS) | ALTA | 
 |RF-002| O aplicativo deve ser capaz de permitir o usuário registrar uma conta | ALTA | 
-|RF-002| O aplicativo deve ser capaz de permitir o fazer login | ALTA | 
-|RF-003| O aplicativo deve fazer a validação dos dados antes de finalizar a requisição para o servidor | ALTA | 
-|RF-004| O aplicativo deve redirecionar o usuário autenticado para a página inicial | ALTA | 
-|RF-004| O aplicativo deve permitir que o usuário leia todos os exercícios listados | MÉDIA | 
-|RF-005| O aplicativo deve permitir que o usuário leia espicificações de um exercício | MÉDIA | 
-|RF-005| O aplicativo deve permitir que o usuário selecione mais de um exercício | MÉDIA | 
-|RF-006| O aplicativo deve oferecer opções de confirmação antes de realizar uma ação que o usuário esteja solicitando | MÉDIA | 
-|RF-007| O aplicativo deve permitir que o usuário faça logout | MÉDIA | 
-|RF-008| O aplicativo deve permitir que o usuário envie seus treinos por um arquivo PDF | ALTA | 
+|RF-003| O aplicativo deve ser capaz de permitir o fazer login | ALTA | 
+|RF-004| O aplicativo deve fazer a validação dos dados antes de finalizar a requisição para o servidor | ALTA | 
+|RF-005| O aplicativo deve redirecionar o usuário autenticado para a página inicial | ALTA | 
+|RF-006| O aplicativo deve permitir que o usuário leia todos os exercícios listados | MÉDIA | 
+|RF-007| O aplicativo deve permitir que o usuário leia espicificações de um exercício | MÉDIA | 
+|RF-008| O aplicativo deve permitir que o usuário selecione mais de um exercício | MÉDIA | 
+|RF-009| O aplicativo deve oferecer opções de confirmação antes de realizar uma ação que o usuário esteja solicitando | MÉDIA | 
+|RF-010| O aplicativo deve permitir que o usuário faça logout | MÉDIA | 
+|RF-011| O aplicativo deve permitir que o usuário envie seus treinos por um arquivo PDF | ALTA | 
 
 ### Requisitos não Funcionais - App Mobile
 
@@ -182,14 +175,9 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de
 
 A matriz de rastreabilidade é uma ferramenta usada para facilitar a visualização dos relacionamento entre requisitos e outros artefatos ou objetos, permitindo a rastreabilidade entre os requisitos e os objetivos de negócio. 
 
-A matriz deve contemplar todos os elementos relevantes que fazem parte do sistema, conforme a figura meramente ilustrativa apresentada a seguir.
 
-![Exemplo de matriz de rastreabilidade](img/02-matriz-rastreabilidade.png)
 
-> **Links Úteis**:
-> - [Artigo Engenharia de Software 13 - Rastreabilidade](https://www.devmedia.com.br/artigo-engenharia-de-software-13-rastreabilidade/12822/)
-> - [Verificação da rastreabilidade de requisitos usando a integração do IBM Rational RequisitePro e do IBM ClearQuest Test Manager](https://developer.ibm.com/br/tutorials/requirementstraceabilityverificationusingrrpandcctm/)
-> - [IBM Engineering Lifecycle Optimization – Publishing](https://www.ibm.com/br-pt/products/engineering-lifecycle-optimization/publishing/)
+![Matriz de rastreabilidade](img/matrizrastreabilidade.jpeg)
 
 
 # Gerenciamento de Projeto
