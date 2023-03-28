@@ -32,7 +32,7 @@ As Personas do projeto foram construídas a partir de entrevistas individuais, s
 
 |   João Ricardo | Informações:                       |                                        |
 |--------------------|------------------------------------|----------------------------------------|
-|<img src="img/imagem-joao.jpg" width = 250>| **Idade:** 29 anos <br> **Ocupação:** Educador físico|**Aplicativos:**<br><ul>● Instagram <br>● Linkedin <br>● Telegram<br>● WhatsApp <br></ul>|
+|<img src="img/imagem-joao.jpg" width = 250>| **Idade:** 59 anos <br> **Ocupação:** Educador físico|**Aplicativos:**<br><ul>● Instagram <br>● Linkedin <br>● Telegram<br>● WhatsApp <br></ul>|
 |**Motivações:**<br><ul>● Quero compartilhar meus treinos. <br><br>● Otimizar meu tempo. </ul>|**Frustrações:**<br><ul>● Levo muito tempo escrevendo fichas; <br><br>● Excesso papel na mochila.   |**Hobbies/Histórias:**<br><ul>● Tenho alunos de outros estados <br>● Preciso enviar o mesmo treino para varios alunos <br>● Quero evoluir a forma como se faz fichas de treino <br></ul>|
 
 
