@@ -3,6 +3,11 @@
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
 
+A metodologia utilizada pelo grupo é a Scrum, classificado como metodologia ágil e considerado um framework simples recomendado para o desenvolvimento de projetos de software. O Scrumé um método de trabalho realizado a partir de pequenos ciclos de atividades dentro de um projeto, tem como característica a flexibilidade nas decisões de desenvolvimento do software por conta da divisão das tarefas em Sprints.
+Cada ciclo de atividade realizada pelo grupo é uma Sprint, sendo esta planejada previamente, e composta por um período de tempo predefinido em que as tarefas devem ser realizadas pela equipe. As Sprints são realizadas 1 vez por semana, sendo o prazo de 1 semana o suficiente para o desenvolvimento das funcionalidades do projeto. Desse modo, a metodologia Scrum permite potencializar o trabalho em equipe, acompanhar a evolução do produto, sempre com foco na qualidade da produção e nos prazos estipulados.
+
+
+
 Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Definições sobre os ambiente de trabalho utilizados pela  equipe para desenvolver o projeto. Abrange a relação de ambientes utilizados, a estrutura para gestão do código fonte, além da definição do processo e ferramenta através dos quais a equipe se organiza (Gestão de Times).
 
 ## Relação de Ambientes de Trabalho
@@ -10,11 +15,42 @@ Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Defini�
 Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito deverá ser apresentada em uma tabela que especifica que detalha Ambiente, Plataforma e Link de Acesso. 
 Nota: Vide documento modelo do estudo de caso "Portal de Notícias" e defina também os ambientes e frameworks que serão utilizados no desenvolvimento de aplicações móveis.
 
+<table border="1">
+    <tr>
+        <td>Ambiente</td>
+        <td>Plataforma</td>
+        <td>Link de Acesso</td>
+    </tr>
+    <tr>
+        <td>Repositório de código fonte</td>
+        <td>GitHub</td>
+        <td>https://github.com/ICEI-PUC-Minas-PMV-ADS/SuperGym</td>
+    </tr>
+    <tr>
+        <td>Documentação do projeto</td>
+        <td>Google.docs</td>
+        <td>https://docs.google.com/document/d/1O494LyIf48wss_2yUxAqCOLgkKYulfyEXgFFr4eic6M/edit</td>
+    </tr>
+    <tr>
+        <td>Gerenciamento do projeto</td>
+        <td>GitHub</td>
+        <td>https://github.com/ICEI-PUC-Minas-PMV-ADS/SuperGym</td>
+    </tr>
+</table>
+
+
+
+
+
 ## Controle de Versão
 
 A ferramenta de controle de versão adotada no projeto foi o
 [Git](https://git-scm.com/), sendo que o [Github](https://github.com)
 foi utilizado para hospedagem do repositório.
+
+A gestão do código fonte do projeto esta sendo realizada através do Git com a utilização de 2 branchs principais: Master e Develop, sendo a Master usada para subir uma release (entregável) e Develop (branch principal) recebe a branch atraves das seguintes etapas: 1) um dos desenvolvedores faz o clone do projeto do grupo, 2) cria uma branch a partir de Develop (ex: new branch Lucia), 3) Lucia faz as alterações no código através desta branch, criando assim uma task, 3) Lucia sobe esta branch via Git push, 4) em seguida Lucia cria um pull request lucia>develop, 5) o desenvolvedor principal do grupo revisa e analisa este pull request, 5) estando ok, o desenvolvedor principal faz um merge pra branch Develop.  Desse modo, ocorre a gestão do código fonte pela equipe, sendo a ferramenta Git utilizada como um sistema de controle de versionamento de código-fonte distribuído. Através do qual, é possível realizar: Suporte para desenvolvimento não-linear, ou seja permite criar branchs que são áreas distintas para separar em cada área, o que irá fazer no projeto; o histórico do Git também gera uma árvore de hash para cada commit (publicação de código) efetuado; além do Git apresentar uma estratégia de merge conectáveis, ou seja, o Git possui um conjunto de algoritmos bem definidos para mesclagem de códigos, realizando autocompletes do código e avisando o desenvolvedor quando ocorrer conflitos entre o mesmo arquivo, só que de versões distintas.
+Quando o projeto estiver finalizado será realizada uma merge da branch Develop com a Main, e a Main será a branch do app finalizado.
+Desse modo, o grupo decidiu utilizar o Git também para a gestão de código por ser uma ferramenta aplicada em outras finalidades durante o decorrer do curso.
 
 O projeto segue a seguinte convenção para o nome de branches:
 
