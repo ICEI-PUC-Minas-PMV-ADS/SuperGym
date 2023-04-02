@@ -119,6 +119,9 @@ Para organização e distribuição das tarefas do projeto, a equipe está utili
 
 O quadro kanban do grupo no Trello está disponível através da URL https://trello.com/b/pIB0ygTd/supergym e é apresentado, no estado atual, na Figura 2. A definição desta estrutura se baseou na proposta feita por Littlefield (2016).
 
+![image](https://user-images.githubusercontent.com/91221827/229373344-f76f3bff-d5c0-4531-8ad5-0c9055c6287b.png)
+
+
 
 <div align="center">
 <img src=".png" width="1000px" />
@@ -129,8 +132,6 @@ Figura 2 - Tela do kanban utilizada pelo grupo
 A tarefas são, ainda, etiquetadas em função da natureza da atividade e seguem o seguinte esquema de cores:
 
 
-<img src="https://user-images.githubusercontent.com/103081069/188251053-5cca07a7-138b-40e5-97f4-cab3bd4a3689.png" width="300px" />
-</div>
 
 > - `Vermelho:` Tarefa deve ser entregue imediatamente.
 > - `Amarelo:` Atenção a data de entrega.
