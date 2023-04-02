@@ -12,8 +12,7 @@ Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Defini�
 
 ## Relação de Ambientes de Trabalho
 
-Os artefatos do projeto são desenvolvidos a partir de diversas plataformas e a relação dos ambientes com seu respectivo propósito deverá ser apresentada em uma tabela que especifica que detalha Ambiente, Plataforma e Link de Acesso. 
-Nota: Vide documento modelo do estudo de caso "Portal de Notícias" e defina também os ambientes e frameworks que serão utilizados no desenvolvimento de aplicações móveis.
+As ferramentas utilizadas nesta etapa do projeto estão especificadas abaixo, além disso o desenvolvimento do API está sendo realizado com o uso da plataforma .NET Core em linguagem C#, enquanto o React Native é o Framework que está sendo utilizado para o desenvolvimento do aplicativo móvel multiplataforma com linguagem Typescript. O gerenciador do Banco de Dados escolhido pela equipe é o Microsoft SQL Server hospedado no Microsoft Azure.
 
 <table border="1">
     <tr>
@@ -36,10 +35,22 @@ Nota: Vide documento modelo do estudo de caso "Portal de Notícias" e defina tam
         <td>GitHub</td>
         <td>https://github.com/ICEI-PUC-Minas-PMV-ADS/SuperGym</td>
     </tr>
+     <tr>
+        <td>Elaboração dos Wireframes</td>
+        <td>Figma</td>
+        <td>https://www.figma.com/file/nBudBVVuNTNL6sRZGmkv5R/SuperGym?node-id=0-1</td>
+    </tr>
+     <tr>
+        <td>Ferramenta para Comunicação do Grupo</td>
+        <td>Teams</td>
+        <td>https://teams.microsoft.com/_#/school/conversations/Grupo%203%20-%20quinta-feira%20-%2020h00?threadId=19:67e0752d41bf428397533cd569317261@thread.tacv2&ctx=channel</td>
+    </tr>
+    <tr>
+        <td>Gerenciamento de Projeto</td>
+        <td>Trello</td>
+        <td>https://trello.com/b/pIB0ygTd/supergym</td>
+    </tr>
 </table>
-
-
-
 
 
 ## Controle de Versão
@@ -67,7 +78,7 @@ etiquetas:
 - `enhancement`: uma funcionalidade precisa ser melhorada
 - `feature`: uma nova funcionalidade precisa ser introduzida
 
-Discuta como a configuração do projeto foi feita na ferramenta de versionamento escolhida. Exponha como a gerência de tags, merges, commits e branchs é realizada. Discuta como a gerência de issues foi realizada.
+
 
 > **Links Úteis**:
 > - [Microfundamento: Gerência de Configuração](https://pucminas.instructure.com/courses/87878/)
@@ -84,10 +95,10 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 Apresente a divisão de papéis entre os membros do grupo.
 
 Exemplificação: A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento. A equipe está organizada da seguinte maneira:
-- Scrum Master: Felipe Domingos;
-- Product Owner: Rommel Carneiro;
-- Equipe de Desenvolvimento: Pedro Penna, Pedro Ivo, Rodrigo Richard;
-- Equipe de Design: Simone Nogueira.
+- Scrum Master: Bruno;
+- Product Owner: Lúcia, Warlen;
+- Equipe de Desenvolvimento: Rafael, Gustavo;
+- Equipe de Design: Fred, Guilherme.
 
 > **Links Úteis**:
 > - [11 Passos Essenciais para Implantar Scrum no seu Projeto](https://mindmaster.com.br/scrum-11-passos/)
@@ -95,6 +106,36 @@ Exemplificação: A equipe utiliza metodologias ágeis, tendo escolhido o Scrum 
 > - [Os papéis do Scrum e a verdade sobre cargos nessa técnica](https://www.atlassian.com/br/agile/scrum/roles)
 
 ### Processo
+
+Para organização e distribuição das tarefas do projeto, a equipe está utilizando o Trello estruturado com as seguintes listas: 
+
+> - ` Cronograma:`  Lista com as datas de entrega de cada etapa.
+> - ` Andamento:`  Esta lista representa o Sprint Backlog. Este é o Sprint atual que estamos trabalhando.
+> - ` Pendências:`  Backlog com as tarefas a serem trabalhadas e representa o Product Backlog.
+> - ` Testes:`  Lista de todas as tarefas que precisam ser testadas.
+> - ` Finalizado:`  Lista  com as tarefas que passaram pelos testes e controle de qualidade e estão prontos para serem entregues. 
+> - ` Dúvidas:`  Lista de perguntas e informações que precisam ser perguntadas ao orientador.
+
+
+O quadro kanban do grupo no Trello está disponível através da URL https://trello.com/b/pIB0ygTd/supergym e é apresentado, no estado atual, na Figura 2. A definição desta estrutura se baseou na proposta feita por Littlefield (2016).
+
+
+<div align="center">
+<img src=".png" width="1000px" />
+</div>
+Figura 2 - Tela do kanban utilizada pelo grupo
+
+
+A tarefas são, ainda, etiquetadas em função da natureza da atividade e seguem o seguinte esquema de cores:
+
+
+<img src="https://user-images.githubusercontent.com/103081069/188251053-5cca07a7-138b-40e5-97f4-cab3bd4a3689.png" width="300px" />
+</div>
+
+> - `Vermelho:` Tarefa deve ser entregue imediatamente.
+> - `Amarelo:` Atenção a data de entrega.
+> - `Verde:` Próxima tarefa a ser feita. 
+> - `Azul:` Tarefa a ser feita.
 
 Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo deverá fazer uso do recurso de gerenciamento de projeto oferecido pelo GitHub, que permite acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
  
