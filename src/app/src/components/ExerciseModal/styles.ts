@@ -15,3 +15,31 @@ export const CloseButton = styled.TouchableOpacity`
   justify-content:center;
   margin: 24px;
 `;
+
+export const ModalBody = styled.View`
+  flex: 1;
+  padding: 32px 24px 0px
+`;
+
+export const Header = styled.View``;
+
+export const InstructionsHeader = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 32px;
+  margin-bottom: 16px
+`;
+
+export const AditionalInfos = styled.View`
+  flex-direction: row;
+`;
+
+export const Instructions = styled.View`
+  background: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  padding: 16px;
+  margin-top: 16px;
+  flex: 1;
+`;
+

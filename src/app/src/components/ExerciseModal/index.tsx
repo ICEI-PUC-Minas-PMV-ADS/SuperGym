@@ -1,9 +1,12 @@
 import React from 'react';
-import { Modal } from 'react-native';
+import { FlatList, Modal } from 'react-native';
 import { Exercise } from '../../types/Exercise';
 import { Text } from '../Text';
-import { Image, CloseButton } from './styles';
+import { Image, CloseButton, ModalBody, Header, InstructionsHeader, AditionalInfos, Instructions } from './styles';
 import { Close } from '../Icons/Close';
+
+import { FooterComponent } from '../Footer/index';
+import { Button } from '../Button';
 
 interface ExerciseModalProps {
   visible: boolean;
@@ -12,7 +15,7 @@ interface ExerciseModalProps {
 }
 
 export function ExerciseModal({ visible, onClose, exercise }: ExerciseModalProps) {
-
+  const instructions = exercise?.instructions;
 
   return (
     <Modal
@@ -22,13 +25,47 @@ export function ExerciseModal({ visible, onClose, exercise }: ExerciseModalProps
       onRequestClose={onClose}
     >
       <Image source={{
-        uri: 'https://images.unsplash.com/photo-1532029837206-abbe2b7620e3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+        uri: exercise?.imagePath,
       }}>
-        <CloseButton>
+        <CloseButton onPress={onClose}>
           <Close />
         </CloseButton>
       </Image>
-      <Text>Hello Modal</Text>
+      <ModalBody>
+        <Header>
+          <Text
+            size={24}
+            weight='700'
+            color='#E89416'>{exercise?.name}</Text>
+          <Text
+            style={{ marginTop: 8 }}
+            color='#666'>{exercise?.description}</Text>
+        </Header>
+
+        <InstructionsHeader>
+          <Text weight='600'>Instruções 📖</Text>
+          <AditionalInfos>
+            <Text weight='600'>{exercise?.series}</Text>
+            <Text style={{ marginLeft: 16 }} weight='600'>{exercise?.waitTime}</Text>
+          </AditionalInfos>
+        </InstructionsHeader>
+
+        <FlatList
+          data={instructions}
+          keyExtractor={(instruction) => instruction}
+          showsVerticalScrollIndicator={false}
+          renderItem={({ item: instruction }) => (
+            <Instructions>
+              <Text size={14} color='#666'>֯● {instruction}</Text>
+            </Instructions>
+          )}
+        />
+
+      </ModalBody>
+      <FooterComponent>
+        <Button onPress={() => alert('Adicionar exercicio')}>Adicionar exercício</Button>
+      </FooterComponent>
+
     </Modal>
   );
 }
