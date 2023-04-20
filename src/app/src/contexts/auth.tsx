@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-import api from '../services/api';
+import api, { USER_AUTH } from '../services/api';
 
-import * as auth from '../services/auth';
 import { createContext } from 'react';
 
 interface AuthContextData {
   signed: boolean;
   user: object | null;
-  signIn(): Promise<void>;
+  signIn: (loginProps: LoginProps) => Promise<void>;
   logout(): void;
   loading: boolean | null;
 }
@@ -18,11 +17,16 @@ interface Props {
   children: JSX.Element;
 }
 
+interface LoginProps {
+  email: string;
+  password: string;
+}
+
 const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 
 export function AuthProvider({ children }: Props) {
   const [user, setUser] = useState<object | null>(null);
-  const [loading, setLoading] = useState<boolean | null>(null);
+  const [loading, setLoading] = useState<boolean | null>(true);
 
   useEffect(() => {
     async function loadStorageData() {
@@ -39,17 +43,23 @@ export function AuthProvider({ children }: Props) {
     loadStorageData();
   }, []);
 
-  async function signIn() {
-    const response = await auth.signIn();
+  async function signIn({ email, password }: LoginProps) {
 
-    setUser(response.user);
+    const { url, options } = USER_AUTH({ email, password });
+    const response = await fetch(url, options);
+    const json = await response.json();
 
-    api.defaults.headers['Authorization'] = `Bearer ${response.token}`;
+    const user = json.user;
+    const token = json.user.token;
 
-    await AsyncStorage.setItem('Supergym:user', JSON.stringify(response.user));
-    await AsyncStorage.setItem('Supergym:token', JSON.stringify(response.token));
+    setUser(user);
 
-    console.log(response);
+    //  api.defaults.headers['Authorization'] = `Bearer ${token}`;
+
+    await AsyncStorage.setItem('Supergym:user', JSON.stringify(user));
+    await AsyncStorage.setItem('Supergym:token', token);
+
+    setLoading(false);
   }
 
   function logout() {
