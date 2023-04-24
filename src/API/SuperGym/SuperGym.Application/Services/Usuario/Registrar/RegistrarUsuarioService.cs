@@ -9,7 +9,7 @@ using SuperGym.Domain.Repositories.Usuario;
 using SuperGym.Exceptions;
 using SuperGym.Exceptions.ExceptionsBase;
 
-namespace SuperGym.Application.Services.Usuario;
+namespace SuperGym.Application.Services.Usuario.Registrar;
 public class RegistrarUsuarioService : IRegistrarUsuarioService
 {
     private readonly IUsuarioWriteOnlyRepository _usuarioWriteOnlyRepository;
@@ -18,10 +18,10 @@ public class RegistrarUsuarioService : IRegistrarUsuarioService
     private readonly IUnityOfWork _unityOfWork;
     private readonly EncriptadorDeSenha _encriptadorDeSenha;
     private readonly TokenController _tokenController;
-    public RegistrarUsuarioService(IUsuarioWriteOnlyRepository usuarioWriteOnlyRepository, 
-        IUsuarioReadOnlyRepository usuarioReadOnlyRepository, 
-        IMapper mapper, IUnityOfWork unityOfWork, 
-        EncriptadorDeSenha encriptadorDeSenha, 
+    public RegistrarUsuarioService(IUsuarioWriteOnlyRepository usuarioWriteOnlyRepository,
+        IUsuarioReadOnlyRepository usuarioReadOnlyRepository,
+        IMapper mapper, IUnityOfWork unityOfWork,
+        EncriptadorDeSenha encriptadorDeSenha,
         TokenController tokenController)
     {
         _usuarioWriteOnlyRepository = usuarioWriteOnlyRepository;

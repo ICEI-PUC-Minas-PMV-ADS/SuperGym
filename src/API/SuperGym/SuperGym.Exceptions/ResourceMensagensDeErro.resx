@@ -132,10 +132,19 @@
   <data name="NOME_USUARIO_EMBRANCO" xml:space="preserve">
     <value>O campo nome deve ser preenchido.</value>
   </data>
+  <data name="SENHA_ATUAL_INVALIDA" xml:space="preserve">
+    <value>Digite a senha corretamente.</value>
+  </data>
   <data name="SENHA_USUARIO_EMBRANCO" xml:space="preserve">
     <value>O campo senha deve ser preenchido.</value>
   </data>
   <data name="SENHA_USUARIO_MINIMO_SEIS_CARACTERES" xml:space="preserve">
     <value>Digite uma senha com no mínimo seis caracteres</value>
+  </data>
+  <data name="TOKEN_EXPIRADO" xml:space="preserve">
+    <value>O token está expirado, faça login novamente.</value>
+  </data>
+  <data name="USUARIO_SEM_PERMISSAO" xml:space="preserve">
+    <value>Usuario sem permissão para essa ação</value>
   </data>
 </root>

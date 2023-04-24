@@ -22,8 +22,8 @@ public static class Bootstrapper
     {
         services
             .AddScoped<IUsuarioReadOnlyRepository, UsuarioRepository>()
-            .AddScoped<IUsuarioWriteOnlyRepository, UsuarioRepository>();
-
+            .AddScoped<IUsuarioWriteOnlyRepository, UsuarioRepository>()
+            .AddScoped<IUsuarioUpdateOnlyRepository, UsuarioRepository>();
     }
 
 }

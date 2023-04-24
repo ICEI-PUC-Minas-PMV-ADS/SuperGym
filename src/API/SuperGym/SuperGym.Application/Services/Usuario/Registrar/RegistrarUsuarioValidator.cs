@@ -2,11 +2,11 @@
 using SuperGym.Comunication.Requests;
 using SuperGym.Exceptions;
 
-namespace SuperGym.Application.Services.Usuario;
+namespace SuperGym.Application.Services.Usuario.Registrar;
 public class RegistrarUsuarioValidator : AbstractValidator<RequestRegistrarUsuarioDTO>
 {
-	public RegistrarUsuarioValidator()
-	{
+    public RegistrarUsuarioValidator()
+    {
         RuleFor(c => c.Nome).NotEmpty().WithMessage(ResourceMensagensDeErro.NOME_USUARIO_EMBRANCO);
         RuleFor(c => c.Email).NotEmpty().WithMessage(ResourceMensagensDeErro.EMAIL_USUARIO_EMBRANCO);
         RuleFor(c => c.Senha).NotEmpty().WithMessage(ResourceMensagensDeErro.SENHA_USUARIO_EMBRANCO);

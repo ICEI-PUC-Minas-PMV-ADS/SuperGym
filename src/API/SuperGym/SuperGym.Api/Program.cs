@@ -1,3 +1,4 @@
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using SuperGym.Api.Filtros;
 using SuperGym.Application;
@@ -8,6 +9,8 @@ using SuperGym.Infra.Context;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddRouting(option => option.LowercaseUrls = true);
+
+builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddDbContext<SuperGymDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("SuperGymConnectionString")));
@@ -26,6 +29,13 @@ builder.Services.AddScoped(provider => new AutoMapper.MapperConfiguration(cfg =>
 {
     cfg.AddProfile(new AutomapperConfiguration());
 }).CreateMapper());
+
+builder.Services.AddCors(policyBuilder =>
+    policyBuilder.AddDefaultPolicy(policy =>
+        policy.WithOrigins("*").AllowAnyHeader().AllowAnyHeader().WithMethods("GET", "POST", "PUT"))
+);
+
+builder.Services.AddScoped<UsuarioAutenticadoAttribute>();
 
 var app = builder.Build();
 
