@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using SuperGym.Application.Services.Usuario;
+﻿using Microsoft.AspNetCore.Mvc;
+using SuperGym.Api.Filtros;
+using SuperGym.Application.Services.Usuario.AlterarSenha;
+using SuperGym.Application.Services.Usuario.Registrar;
 using SuperGym.Comunication.Requests;
 using SuperGym.Comunication.Responses;
-using System.Threading.Tasks;
 
 namespace SuperGym.Api.Controllers;
 public class UsuarioController : SuperGymController
@@ -17,5 +17,18 @@ public class UsuarioController : SuperGymController
         var result = await service.Executar(request);
 
         return Created(string.Empty, result);
+    }
+
+    [HttpPut]
+    [Route("alterar-senha")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ServiceFilter(typeof(UsuarioAutenticadoAttribute))]
+    public async Task<IActionResult> AlterarSenha(
+        [FromServices] IAlterarSenhaService service,
+        [FromBody] RequestAlterarSenhaDTO request)
+    {
+        await service.Executar(request);
+
+        return NoContent();
     }
 }

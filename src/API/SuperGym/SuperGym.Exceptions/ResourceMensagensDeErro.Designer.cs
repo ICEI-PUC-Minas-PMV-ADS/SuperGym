@@ -106,6 +106,15 @@ namespace SuperGym.Exceptions {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Digite a senha corretamente..
+        /// </summary>
+        public static string SENHA_ATUAL_INVALIDA {
+            get {
+                return ResourceManager.GetString("SENHA_ATUAL_INVALIDA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to O campo senha deve ser preenchido..
         /// </summary>
         public static string SENHA_USUARIO_EMBRANCO {
@@ -120,6 +129,24 @@ namespace SuperGym.Exceptions {
         public static string SENHA_USUARIO_MINIMO_SEIS_CARACTERES {
             get {
                 return ResourceManager.GetString("SENHA_USUARIO_MINIMO_SEIS_CARACTERES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to O token está expirado, faça login novamente..
+        /// </summary>
+        public static string TOKEN_EXPIRADO {
+            get {
+                return ResourceManager.GetString("TOKEN_EXPIRADO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Usuario sem permissão para essa ação.
+        /// </summary>
+        public static string USUARIO_SEM_PERMISSAO {
+            get {
+                return ResourceManager.GetString("USUARIO_SEM_PERMISSAO", resourceCulture);
             }
         }
     }
