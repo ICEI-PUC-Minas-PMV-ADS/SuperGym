@@ -33,6 +33,8 @@ export function AuthProvider({ children }: Props) {
       const storagedUser = await AsyncStorage.getItem('Supergym:user');
       const storagedToken = await AsyncStorage.getItem('Supergym:token');
 
+      if (!storagedUser) setLoading(false);
+
       if (storagedToken && storagedUser) {
         api.defaults.headers['Authorization'] = `Bearer ${storagedToken}`;
         setUser(JSON.parse(storagedUser));

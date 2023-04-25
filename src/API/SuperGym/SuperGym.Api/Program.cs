@@ -16,7 +16,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//Injeção de Dependencias de Repositories e UnityOfWork
+//Injeï¿½ï¿½o de Dependencias de Repositories e UnityOfWork
 builder.Services.AddRepository(builder.Configuration);
 builder.Services.AddApplication(builder.Configuration);
 
@@ -24,12 +24,19 @@ builder.Services.AddMvc(options => options.Filters.Add(typeof(FiltroDasException
 
 builder.Services.AddScoped(provider => new AutoMapper.MapperConfiguration(cfg =>
 {
-    cfg.AddProfile(new AutomapperConfiguration());
+  cfg.AddProfile(new AutomapperConfiguration());
 }).CreateMapper());
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+
+app.UseCors(c =>
+{
+  c.AllowAnyHeader();
+  c.AllowAnyMethod();
+  c.AllowAnyOrigin();
+});
 
 app.UseSwagger();
 app.UseSwaggerUI();

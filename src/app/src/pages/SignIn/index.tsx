@@ -9,15 +9,14 @@ import { FieldText } from '../../components/FieldText';
 import { WhiteButton } from '../../components/WhiteButton';
 
 function SignIn() {
-  const { signed, signIn } = useContext(AuthContext);
+  const { signIn } = useContext(AuthContext);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
 
-
   async function handleSignIn() {
     signIn({ email, password });
-    console.log(signed);
+    console.log(email, password);
   }
 
   function handleChangeEmail(event: NativeSyntheticEvent<TextInputChangeEventData>) {
@@ -49,7 +48,10 @@ function SignIn() {
           onChange={handleChangePassword}
           placeholder='************'></FieldText>
         <WhiteButton onPress={handleSignIn}>Entrar</WhiteButton>
+
       </FieldContainer>
+
+
       <ButtonContainer>
         <WhiteButton onPress={() => null}>Cadastra-se</WhiteButton>
       </ButtonContainer>
