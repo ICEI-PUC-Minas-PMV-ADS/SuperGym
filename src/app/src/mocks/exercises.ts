@@ -1,6 +1,6 @@
 export const exercises = [
   {
-    _id: 'f00f3a68-bc84-sdfsdf4363-bb4f-3e3e27b0aaf3asdb',
+    _id: 'f00f3a68-bc84-sdfsdf4363-bb4f234234-3e3e27b0aaf3asdb',
     name: 'Agachamento',
     description: 'Exercício para pernas e glúteos',
     series: '⚡️ 3x 12',
@@ -16,7 +16,7 @@ export const exercises = [
     category: '5ea80343-ae9e-447e-b30a-8496e53d90b6'
   },
   {
-    _id: 'f00f3a68-bc84-4363-bb4f-3e3e27b0a34533asdad2445afb',
+    _id: 'f00f3a68-bc84-4363-b23421231b4f-3e3e27b0a34533asdad2445afb',
     name: 'Supino',
     description: 'Exercício para o peitoral',
     series: '⚡️ 3x 15',

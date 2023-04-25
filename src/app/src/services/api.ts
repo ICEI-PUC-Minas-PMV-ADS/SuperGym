@@ -1,10 +1,10 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:3000',
+  baseURL: 'http://192.168.0.3:3000',
 });
 
-const url = 'http://localhost:3000';
+const url = 'http://192.168.0.3:3000';
 
 export function USER_AUTH(body: object) {
   return {

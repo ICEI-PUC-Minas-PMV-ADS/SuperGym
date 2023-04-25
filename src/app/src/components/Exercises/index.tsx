@@ -2,7 +2,7 @@ import React from 'react';
 
 import { FlatList } from 'react-native';
 
-import { exercises } from '../../mocks/exercises';
+
 import { Exercise } from '../../types/Exercise';
 import { ExerciseModal } from '../ExerciseModal';
 import { PlusCircle } from '../Icons/PlusCircle';
@@ -15,9 +15,15 @@ import {
   AddButton
 } from './styles';
 
-export function Exercises() {
+interface ExercisesProps {
+  onAddToCart: (exercise: Exercise) => void;
+  exercises: Exercise[]
+}
+
+
+export function Exercises({ onAddToCart, exercises }: ExercisesProps) {
   const [isModalVisible, setIsModalVisible] = React.useState(false);
-  const [selectedExercise, setIsSelectedExercise] = React.useState<Exercise | null>(null);
+  const [selectedExercise, setIsSelectedExercise] = React.useState<Exercise>();
 
   function handleOpenModal(exercise: Exercise) {
     setIsModalVisible(true);
@@ -29,7 +35,8 @@ export function Exercises() {
       <ExerciseModal
         visible={isModalVisible}
         onClose={() => setIsModalVisible(false)}
-        exercise={selectedExercise}
+        exercise={selectedExercise!}
+        onAddToCart={onAddToCart}
       />
       <FlatList
         data={exercises}
@@ -48,7 +55,8 @@ export function Exercises() {
                 <Text style={{ marginVertical: 8 }} size={14} color="#666">{exercise.description}</Text>
                 <Text size={14} weight="700"><Text size={14}>Séries: </Text>{exercise.series}</Text>
               </ExerciseDetails>
-              <AddButton>
+
+              <AddButton onPress={() => onAddToCart(exercise)}>
                 <PlusCircle />
               </AddButton>
             </ExerciseContainer>
