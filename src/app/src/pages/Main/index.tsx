@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+import AuthContext from '../../contexts/auth';
 
 import { Header } from '../../components/Header';
 import { FooterComponent } from '../../components/Footer';
 import { Categories } from '../../components/Categories';
 import { Exercises } from '../../components/Exercises';
 import { Cart } from '../../components/Cart';
+import { CATEGORIES_GET, EXERCISES_GET, TRAINING_CREATE } from '../../services/api';
 
 import {
   Container,
@@ -19,14 +23,52 @@ import { CartItem } from '../../types/CartItem';
 import { Exercise } from '../../types/Exercise';
 import { ActivityIndicator } from 'react-native';
 
-import { exercises as mockExercises } from '../../mocks/exercises';
+import { Category } from '../../types/Category';
 
 function Main() {
   const [isNameModalVisible, setisNameModalVisible] = useState(false);
   const [selectedName, setSelectedName] = useState('');
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [isLoading] = useState(false);
-  const [exercises] = useState<Exercise[]>(mockExercises);
+  const [exercises, setExercises] = useState<Exercise[]>([]);
+  const [categories, setCategories] = useState<Category[]>([]);
+
+  const { user } = useContext(AuthContext);
+
+  interface User {
+    user_id: string;
+    token: string;
+  }
+
+  useEffect(() => {
+    async function getCategories() {
+      if (user) {
+        const userWithUserToken = user as User;
+        const token = userWithUserToken.token;
+        const { url, options } = CATEGORIES_GET(token);
+        const response = await fetch(url, options);
+        const categories = await response.json();
+
+        setCategories(categories);
+      }
+    }
+
+    async function getExercises() {
+      if (user) {
+        const userWithUserId = user as User;
+        const userId = userWithUserId.user_id;
+        const token = userWithUserId.token;
+        const { url, options } = EXERCISES_GET({ token, userId });
+        const response = await fetch(url, options);
+        const exercises = await response.json();
+
+        setExercises(exercises);
+      }
+    }
+
+    getExercises();
+    getCategories();
+  }, []);
 
   function handleSaveName(name: string) {
     setSelectedName(name);
@@ -37,13 +79,27 @@ function Main() {
     setCartItems([]);
   }
 
+  async function handleCreateTraining(body: object) {
+    const token = await AsyncStorage.getItem('Supergym:token');
+
+    if (token) {
+      const { url, options } = TRAINING_CREATE({ body, token });
+      const response = await fetch(url, options);
+      const training = await response.json();
+
+      console.log(training);
+    }
+
+
+  }
+
   function handleAddToCart(exercise: Exercise) {
     if (!selectedName) {
       setisNameModalVisible(true);
     }
 
     setCartItems((prevState) => {
-      const itemIndex = prevState.findIndex(cartItem => cartItem.exercise._id === exercise._id);
+      const itemIndex = prevState.findIndex(cartItem => cartItem.exercise.id === exercise.id);
 
       if (itemIndex < 0) {
         return prevState.concat({
@@ -68,7 +124,7 @@ function Main() {
   function handleRemoveToCart(exercise: Exercise) {
     setCartItems((prevState) => {
       const itemIndex = prevState.findIndex(
-        cartItem => cartItem.exercise._id === exercise._id
+        cartItem => cartItem.exercise.id === exercise.id
       );
 
       const item = prevState[itemIndex];
@@ -108,7 +164,7 @@ function Main() {
         {!isLoading && (
           <>
             <CategoriesContainer>
-              <Categories />
+              <Categories categories={categories} />
             </CategoriesContainer>
 
             <ExercisesContainer>

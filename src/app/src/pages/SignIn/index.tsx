@@ -4,23 +4,27 @@ import { Container, Content, FieldContainer, Message, ButtonContainer } from './
 
 import { NativeSyntheticEvent, TextInputChangeEventData } from 'react-native';
 
+import { ParamListBase, useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+
 import { Text } from '../../components/Text';
 import { FieldText } from '../../components/FieldText';
 import { WhiteButton } from '../../components/WhiteButton';
 
 function SignIn() {
-  const { signIn } = useContext(AuthContext);
+  const { signIn, error } = useContext(AuthContext);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
 
   async function handleSignIn() {
-    signIn({ email, password });
-    console.log(email, password);
+    await signIn({ email, password });
   }
 
   function handleChangeEmail(event: NativeSyntheticEvent<TextInputChangeEventData>) {
     setEmail(event.nativeEvent.text);
+
   }
 
   function handleChangePassword(event: NativeSyntheticEvent<TextInputChangeEventData>) {
@@ -47,13 +51,12 @@ function SignIn() {
           value={password}
           onChange={handleChangePassword}
           placeholder='************'></FieldText>
+        {error && <Text style={{ marginBottom: 16 }} color='white'>{error}</Text>}
         <WhiteButton onPress={handleSignIn}>Entrar</WhiteButton>
-
       </FieldContainer>
 
-
       <ButtonContainer>
-        <WhiteButton onPress={() => null}>Cadastra-se</WhiteButton>
+        <WhiteButton onPress={() => navigation.navigate('Register')}>Cadastra-se</WhiteButton>
       </ButtonContainer>
     </Container>
   );

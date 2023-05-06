@@ -1,16 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-import api, { USER_AUTH } from '../services/api';
+import api, { USER_AUTH, USER_CREATE } from '../services/api';
 
 import { createContext } from 'react';
+
+import { ParamListBase, useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+
 
 interface AuthContextData {
   signed: boolean;
   user: object | null;
   signIn: (loginProps: LoginProps) => Promise<void>;
+  create: (createUserProps: CreateUserProps) => Promise<void>;
   logout(): void;
   loading: boolean | null;
+  error: string;
 }
 
 interface Props {
@@ -22,11 +28,20 @@ interface LoginProps {
   password: string;
 }
 
+interface CreateUserProps {
+  name: string;
+  email: string;
+  password: string;
+}
+
 const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 
 export function AuthProvider({ children }: Props) {
   const [user, setUser] = useState<object | null>(null);
-  const [loading, setLoading] = useState<boolean | null>(true);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState('');
+
+  const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
 
   useEffect(() => {
     async function loadStorageData() {
@@ -37,6 +52,7 @@ export function AuthProvider({ children }: Props) {
 
       if (storagedToken && storagedUser) {
         api.defaults.headers['Authorization'] = `Bearer ${storagedToken}`;
+        setError('');
         setUser(JSON.parse(storagedUser));
         setLoading(false);
       }
@@ -46,22 +62,38 @@ export function AuthProvider({ children }: Props) {
   }, []);
 
   async function signIn({ email, password }: LoginProps) {
-
     const { url, options } = USER_AUTH({ email, password });
     const response = await fetch(url, options);
     const json = await response.json();
 
     const user = json.user;
-    const token = json.user.token;
+    const token = user ? user.token : undefined;
 
-    setUser(user);
+    if (response.ok) {
+      setUser(user);
+      navigation.navigate('Main');
+      await AsyncStorage.setItem('Supergym:user', JSON.stringify(user));
+      await AsyncStorage.setItem('Supergym:token', token);
+      setError('');
+      setLoading(false);
+    } else {
+      setError(json.message);
+    }
 
-    //  api.defaults.headers['Authorization'] = `Bearer ${token}`;
+  }
 
-    await AsyncStorage.setItem('Supergym:user', JSON.stringify(user));
-    await AsyncStorage.setItem('Supergym:token', token);
+  async function create({ name, email, password }: CreateUserProps) {
+    const { url, options } = USER_CREATE({ name, email, password });
+    const response = await fetch(url, options);
+    const json = await response.json();
 
-    setLoading(false);
+    if (response.ok) {
+      navigation.navigate('SignIn');
+      setLoading(false);
+      setError('');
+    } else {
+      setError(json.message);
+    }
   }
 
   function logout() {
@@ -69,7 +101,7 @@ export function AuthProvider({ children }: Props) {
   }
 
   return (
-    <AuthContext.Provider value={{ signed: Boolean(user), user, signIn, logout, loading }}>
+    <AuthContext.Provider value={{ signed: Boolean(user), user, signIn, create, logout, loading, error }}>
       {children}
     </AuthContext.Provider>
   );

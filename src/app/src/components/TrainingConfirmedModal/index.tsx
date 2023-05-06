@@ -22,7 +22,7 @@ export function TrainingConfirmedModal({ visible, onOk }: TrainingConfirmedModal
         <Text style={{ marginTop: 12 }} weight='700' size={20}>Treino Confirmado.</Text>
         <Text style={{ marginTop: 4, marginBottom: 16 }} weight='600' opacity={.9} size={14}>Agora é só enviar para o seu aluno.</Text>
         <WhiteButton
-          onPress={onOk}>Ok!</WhiteButton>
+          onPress={onOk}>Donwload PDF</WhiteButton>
       </Container>
 
     </Modal>

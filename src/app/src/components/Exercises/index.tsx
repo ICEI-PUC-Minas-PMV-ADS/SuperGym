@@ -42,7 +42,7 @@ export function Exercises({ onAddToCart, exercises }: ExercisesProps) {
         data={exercises}
         style={{ marginTop: 32 }}
         contentContainerStyle={{ paddingHorizontal: 24 }}
-        keyExtractor={exercise => exercise._id}
+        keyExtractor={exercise => exercise.id}
         ItemSeparatorComponent={Separator}
         renderItem={({ item: exercise }) => {
           return (

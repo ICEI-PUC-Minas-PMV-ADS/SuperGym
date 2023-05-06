@@ -7,7 +7,7 @@ import { ActivityIndicator } from 'react-native';
 
 interface ButtonProps {
   children: string;
-  onPress: () => void;
+  onPress?: () => void;
   disabled?: boolean;
   loading?: boolean;
 }

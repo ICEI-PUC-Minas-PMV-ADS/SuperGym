@@ -39,7 +39,7 @@ export function Cart({ cartItems, onRemove, onAdd, onConfirmTraining }: CartProp
         (
           <FlatList
             data={cartItems}
-            keyExtractor={cartItem => cartItem.exercise._id}
+            keyExtractor={cartItem => cartItem.exercise.id}
             showsVerticalScrollIndicator={false}
             style={{ marginBottom: 20, maxHeight: 180 }}
             renderItem={({ item: cartItem }) => (
