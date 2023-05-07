@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+    container_name: api_supergym_dotnet
+    command: dotnet SuperGym.Api.dll
+    ports:
+      - "80:80"
+    volumes:
+      - .:/usr/app
+    depends_on:
+      - db
+    environment:
+      ConnectionStrings__SuperGymConnectionString: "Server=db;Database=SuperGym_Dev;User Id=sa;Password=myStrongPassword;Trusted_Connection=True;"
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: SuperGym_Dev
+    ports:
+      - 1433:1433
+    environment:
+      SA_PASSWORD: myStrongPassword # Altere "your_password" para a senha desejada
+      ACCEPT_EULA: Y
+    volumes:
+      - dbdata:/var/opt/mssql
+    restart: always
+
+volumes:
+  dbdata:

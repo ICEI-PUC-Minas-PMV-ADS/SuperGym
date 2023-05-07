@@ -2,13 +2,18 @@ import React, { useState } from 'react';
 
 import { FlatList } from 'react-native';
 
-import { categories } from '../../mocks/categories';
+//import { categories } from '../../mocks/categories';
 
 import { Text } from '../Text';
 
-import { Category, Icon } from './styles';
+import { CategoryContainer, Icon } from './styles';
+import { Category } from '../../types/Category';
 
-export function Categories() {
+interface CategoriesProps {
+  categories: Category[]
+}
+
+export function Categories({ categories }: CategoriesProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>('');
   function handleSelectCategory(id: string) {
     const category = selectedCategory === id ? '' : id;
@@ -23,12 +28,12 @@ export function Categories() {
         showsHorizontalScrollIndicator={false}
         data={categories}
         contentContainerStyle={{ paddingRight: 24 }}
-        keyExtractor={category => category._id}
+        keyExtractor={category => category.id}
         renderItem={({ item: category }) => {
-          const isSelected = selectedCategory === category._id;
+          const isSelected = selectedCategory === category.id;
 
           return (
-            <Category onPress={() => handleSelectCategory(category._id)}>
+            <CategoryContainer onPress={() => handleSelectCategory(category.id)}>
               <Icon>
                 <Text
                   opacity={isSelected ? 1 : 0.5}>
@@ -41,7 +46,7 @@ export function Categories() {
                 size={14} weight="700">
                 {category.name}
               </Text>
-            </Category>
+            </CategoryContainer>
           );
         }}
       />

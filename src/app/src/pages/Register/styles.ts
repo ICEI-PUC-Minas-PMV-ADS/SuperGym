@@ -28,5 +28,5 @@ export const FieldContainer = styled.View`
 `;
 
 export const ButtonContainer = styled.View`
-  margin: 100px;
+
 `;

@@ -17,6 +17,7 @@ function Routes() {
     );
   }
 
+
   return signed ? <AuthRoutes /> : <AppRoutes />;
 }
 
