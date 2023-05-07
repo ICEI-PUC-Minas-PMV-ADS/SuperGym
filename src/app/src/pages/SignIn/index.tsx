@@ -8,11 +8,11 @@ import { ParamListBase, useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 import { Text } from '../../components/Text';
-import { FieldText } from '../../components/FieldText';
+import { Input } from '../../components/Input';
 import { WhiteButton } from '../../components/WhiteButton';
 
 function SignIn() {
-  const { signIn, error } = useContext(AuthContext);
+  const { signIn, error, loading, setError } = useContext(AuthContext);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -31,6 +31,11 @@ function SignIn() {
     setPassword(event.nativeEvent.text);
   }
 
+  function handleNavigation() {
+    navigation.navigate('Register');
+    setError('');
+  }
+
   return (
     <Container>
       <Content>
@@ -41,22 +46,30 @@ function SignIn() {
         </Message>
       </Content>
       <FieldContainer>
-        <FieldText
+        <Input
+          secureTextEntry={false}
           keyboardType="email-address"
           value={email}
           onChange={handleChangeEmail}
-          placeholder='username@email.com'></FieldText>
-        <FieldText
-          keyboardType='visible-password'
+          placeholder='username@email.com' />
+        <Input
+          secureTextEntry
+          keyboardType='default'
           value={password}
           onChange={handleChangePassword}
-          placeholder='************'></FieldText>
+          placeholder='************' />
         {error && <Text style={{ marginBottom: 16 }} color='white'>{error}</Text>}
-        <WhiteButton onPress={handleSignIn}>Entrar</WhiteButton>
+
+        {email.length === 0 || password.length === 0 ? (
+          <WhiteButton color='#25C26E' disabled>Entrar</WhiteButton>
+        ) : (
+          <WhiteButton loading={loading} onPress={handleSignIn}>Entrar</WhiteButton>
+        )
+        }
       </FieldContainer>
 
       <ButtonContainer>
-        <WhiteButton onPress={() => navigation.navigate('Register')}>Cadastra-se</WhiteButton>
+        <WhiteButton onPress={handleNavigation}>Cadastra-se</WhiteButton>
       </ButtonContainer>
     </Container>
   );

@@ -1,11 +1,11 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import AuthContext from '../../contexts/auth';
 
 import { Text } from '../../components/Text';
 
 import { Container, Content, FieldContainer, Message } from './styles';
 
-import { FieldText } from '../../components/FieldText';
+import { Input } from '../../components/Input';
 import { WhiteButton } from '../../components/WhiteButton';
 
 import { ParamListBase, useNavigation } from '@react-navigation/native';
@@ -18,13 +18,12 @@ function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const { create, error, loading } = useContext(AuthContext);
+  const { create, error, loading, setError } = useContext(AuthContext);
 
   const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
 
   async function handleCreate() {
     create({ name, email, password });
-    console.log('Erro: ', error);
   }
 
   function handleChangeName(event: NativeSyntheticEvent<TextInputChangeEventData>) {
@@ -41,7 +40,7 @@ function Register() {
 
   function handleNavigation() {
     navigation.navigate('SignIn');
-
+    setError('');
   }
 
   return (
@@ -54,24 +53,31 @@ function Register() {
         </Message>
       </Content>
       <FieldContainer>
-        <FieldText
+        <Input
+          secureTextEntry={false}
           keyboardType="default"
           value={name}
           onChange={handleChangeName}
-          placeholder='Nome'></FieldText>
-        <FieldText
+          placeholder='Nome' />
+        <Input
+          secureTextEntry={false}
           keyboardType="email-address"
           value={email}
           onChange={handleChangeEmail}
-          placeholder='Email'></FieldText>
-        <FieldText
+          placeholder='Email' />
+        <Input
           keyboardType='visible-password'
           value={password}
-
+          secureTextEntry
           onChange={handleChangePassword}
-          placeholder='Senha'></FieldText>
+          placeholder='Senha' />
         {error ? <Text style={{ marginBottom: 16 }} color='white'>{error}</Text> : null}
-        {loading ? <WhiteButton disabled>Carregando...</WhiteButton> : <WhiteButton onPress={handleCreate}>Cadastra-se</WhiteButton>}
+        {email.length === 0 || password.length === 0 || email.length === 0 ? (
+          <WhiteButton color='white' disabled>Cadastre-se</WhiteButton>
+        ) : (
+          <WhiteButton loading={loading} onPress={handleCreate}>Cadastre-se</WhiteButton>
+        )
+        }
       </FieldContainer>
 
       <TouchableOpacity onPress={handleNavigation} style={{ alignItems: 'center' }}>

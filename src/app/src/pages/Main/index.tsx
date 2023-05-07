@@ -1,6 +1,9 @@
 import React, { useEffect, useState, useContext } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
+import * as FileSystem from 'expo-file-system';
+import * as Sharing from 'expo-sharing';
+
 import AuthContext from '../../contexts/auth';
 
 import { Header } from '../../components/Header';
@@ -8,7 +11,7 @@ import { FooterComponent } from '../../components/Footer';
 import { Categories } from '../../components/Categories';
 import { Exercises } from '../../components/Exercises';
 import { Cart } from '../../components/Cart';
-import { CATEGORIES_GET, EXERCISES_GET, TRAINING_CREATE } from '../../services/api';
+import { CATEGORIES_GET, EXERCISES_GET, TRAINING_CREATE, PDF_DOWNLOAD } from '../../services/api';
 
 import {
   Container,
@@ -24,14 +27,17 @@ import { Exercise } from '../../types/Exercise';
 import { ActivityIndicator } from 'react-native';
 
 import { Category } from '../../types/Category';
+import { Text } from '../../components/Text';
+
 
 function Main() {
   const [isNameModalVisible, setisNameModalVisible] = useState(false);
   const [selectedName, setSelectedName] = useState('');
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
-  const [isLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [exercises, setExercises] = useState<Exercise[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
+  const [trainingId, setTrainingId] = useState('');
 
   const { user } = useContext(AuthContext);
 
@@ -42,7 +48,9 @@ function Main() {
 
   useEffect(() => {
     async function getCategories() {
+      setIsLoading(true);
       if (user) {
+        setIsLoading(false);
         const userWithUserToken = user as User;
         const token = userWithUserToken.token;
         const { url, options } = CATEGORIES_GET(token);
@@ -54,7 +62,9 @@ function Main() {
     }
 
     async function getExercises() {
+      setIsLoading(true);
       if (user) {
+        setIsLoading(false);
         const userWithUserId = user as User;
         const userId = userWithUserId.user_id;
         const token = userWithUserId.token;
@@ -79,18 +89,62 @@ function Main() {
     setCartItems([]);
   }
 
-  async function handleCreateTraining(body: object) {
-    const token = await AsyncStorage.getItem('Supergym:token');
+  async function handleCreateTraining() {
+    try {
+      setIsLoading(true);
+      if (user) {
+        const token = await AsyncStorage.getItem('Supergym:token');
+        const body = {
+          clientName: selectedName,
+          exercises: cartItems.map((item: CartItem) => ({ id: item.exercise.id })),
+          userId: user.user_id,
+        };
 
-    if (token) {
-      const { url, options } = TRAINING_CREATE({ body, token });
-      const response = await fetch(url, options);
-      const training = await response.json();
+        const { url, options } = TRAINING_CREATE({ body, token });
+        const response = await fetch(url, options);
+        const json = await response.json();
+        const trainingId = json.id;
+        setTrainingId(trainingId);
+        setIsLoading(false);
+      }
 
-      console.log(training);
+    } catch (err) {
+      setIsLoading(false);
+      console.log(err);
     }
+  }
 
+  async function handleDownloadPDF() {
+    setIsLoading(true);
+    try {
+      const token = await AsyncStorage.getItem('Supergym:token');
+      const { url, options } = PDF_DOWNLOAD({ trainingId, token });
+      const response = await fetch(url, options);
 
+      if (response.ok) {
+        const pdf = await response.blob() as Blob & { _data: { name: string } };
+        const filename = pdf._data.name;
+
+        const fileUri = `${FileSystem.documentDirectory}${filename}`;
+
+        const reader = new FileReader();
+        reader.readAsDataURL(pdf);
+
+        reader.onload = async () => {
+          const pdfBase64 = reader!.result!.split(',')[1];
+          await FileSystem.writeAsStringAsync(fileUri, pdfBase64, {
+            encoding: FileSystem.EncodingType.Base64,
+          });
+          await Sharing.shareAsync(fileUri);
+          handleResetTraining();
+          setIsLoading(false);
+        };
+      }
+
+    } catch (err) {
+      setIsLoading(false);
+      console.log('Error: ', err);
+    }
   }
 
   function handleAddToCart(exercise: Exercise) {
@@ -153,27 +207,26 @@ function Main() {
           selectedName={selectedName}
           onCancelTraining={handleResetTraining} />
 
-        {isLoading &&
-          (
-            <CenteredContainer>
-              <ActivityIndicator size="large" color="#25C26E" />
-            </CenteredContainer>
-          )
-        }
-
-        {!isLoading && (
-          <>
-            <CategoriesContainer>
-              <Categories categories={categories} />
-            </CategoriesContainer>
-
-            <ExercisesContainer>
-              <Exercises
-                exercises={exercises}
-                onAddToCart={handleAddToCart} />
-            </ExercisesContainer>
-          </>
-        )}
+        <>
+          {exercises.length > 0 || categories.length > 0 ? (
+            <>
+              <CategoriesContainer>
+                <Categories categories={categories} />
+              </CategoriesContainer>
+              <ExercisesContainer>
+                <Exercises
+                  exercises={exercises}
+                  onAddToCart={handleAddToCart} />
+              </ExercisesContainer>
+            </>
+          ) :
+            (
+              <CenteredContainer>
+                <ActivityIndicator color="#25C26E" />
+              </CenteredContainer>
+            )
+          }
+        </>
 
         <FooterComponent>
           {!selectedName ?
@@ -183,14 +236,15 @@ function Main() {
             :
             (
               <Cart
+                loading={isLoading}
                 cartItems={cartItems}
                 onAdd={handleAddToCart}
                 onRemove={handleRemoveToCart}
-                onConfirmTraining={handleResetTraining}
+                onConfirmTraining={handleCreateTraining}
+                onOk={handleDownloadPDF}
               />
             )}
         </FooterComponent>
-
       </Container>
 
       <ClientNameModal

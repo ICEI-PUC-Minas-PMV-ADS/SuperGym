@@ -10,18 +10,25 @@ interface ButtonProps {
   onPress?: () => void;
   disabled?: boolean;
   loading?: boolean;
+  color?: string;
 }
 
-export function Button({ children, onPress, disabled, loading }: ButtonProps) {
+export function Button({ children, onPress, disabled, loading, color }: ButtonProps) {
   return (
-    <Container onPress={onPress} disabled={disabled || loading}>
-      {!loading && (
-        <Text weight='700' color='white'>{children}</Text>
-      )}
 
-      {loading && (
-        <ActivityIndicator color="white" />
-      )}
-    </Container>
+    <>
+      {loading ? (
+        <Container onPress={onPress} disabled={true}>
+          <ActivityIndicator color="white" />
+        </Container>
+
+      ) :
+        <Container onPress={onPress} disabled={disabled}>
+          <Text weight='700' color={color ? color : 'white'}>{children}</Text>
+        </Container>
+      }
+    </>
+
+
   );
 }

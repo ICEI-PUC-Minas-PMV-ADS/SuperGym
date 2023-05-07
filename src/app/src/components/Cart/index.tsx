@@ -17,24 +17,27 @@ interface CartProps {
   onAdd: (exercise: Exercise) => void;
   onRemove: (exercise: Exercise) => void;
   onConfirmTraining: () => void;
+  onOk: () => void;
+  loading: boolean
 }
 
-export function Cart({ cartItems, onRemove, onAdd, onConfirmTraining }: CartProps) {
-  const [isLoading] = useState(false);
+export function Cart({ cartItems, onRemove, onAdd, onConfirmTraining, onOk, loading }: CartProps) {
+
   const [isModalVisible, setIsModalVisible] = useState(false);
 
-  function handleConfirmTraining() {
-    setIsModalVisible(true);
+  async function handleConfirmTraining() {
+    if (!loading) setIsModalVisible(true);
+    onConfirmTraining();
   }
 
-  function handleOk() {
-    setIsModalVisible(false);
-    onConfirmTraining();
+  async function handleOk() {
+    onOk();
+    if (loading) setIsModalVisible(false);
   }
 
   return (
     <>
-      <TrainingConfirmedModal onOk={handleOk} visible={isModalVisible} />
+      <TrainingConfirmedModal loading={loading} onOk={handleOk} visible={isModalVisible} />
       {cartItems.length > 0 &&
         (
           <FlatList
@@ -82,7 +85,7 @@ export function Cart({ cartItems, onRemove, onAdd, onConfirmTraining }: CartProp
 
       {cartItems.length > 0 ?
         (
-          <Button loading={isLoading} onPress={handleConfirmTraining}>Confirmar treino</Button>
+          <Button loading={loading} onPress={handleConfirmTraining}>Confirmar treino</Button>
         ) :
 
         (

@@ -62,7 +62,7 @@ export function EXERCISES_GET({ token, userId }: ExercisesGetProps) {
 }
 
 interface TrainingCreateProps {
-  token: string;
+  token: string | null;
   body: object;
 }
 
@@ -76,6 +76,24 @@ export function TRAINING_CREATE({ body, token }: TrainingCreateProps) {
         Authorization: 'Bearer ' + token,
       },
       body: JSON.stringify(body),
+    },
+  };
+}
+
+interface DownloadPDFProps {
+  trainingId: string;
+  token: string | null;
+}
+
+export function PDF_DOWNLOAD({ trainingId, token }: DownloadPDFProps) {
+  return {
+    url: url + `/download/${trainingId}`,
+    options: {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/pdf',
+        Authorization: 'Bearer ' + token,
+      },
     },
   };
 }
