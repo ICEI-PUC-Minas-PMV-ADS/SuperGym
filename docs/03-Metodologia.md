@@ -12,7 +12,7 @@ Descreva aqui a metodologia de trabalho do grupo para atacar o problema. Defini�
 
 ## Relação de Ambientes de Trabalho
 
-As ferramentas utilizadas nesta etapa do projeto estão especificadas abaixo, além disso o desenvolvimento do API está sendo realizado com o uso da plataforma .NET Core em linguagem C#, enquanto o React Native é o Framework que está sendo utilizado para o desenvolvimento do aplicativo móvel multiplataforma com linguagem Typescript. O gerenciador do Banco de Dados escolhido pela equipe é o Microsoft SQL Server hospedado no Microsoft Azure.
+As ferramentas utilizadas nesta etapa do projeto estão especificadas abaixo, além disso o desenvolvimento do API está sendo realizado com o uso da plataforma .NET Core em linguagem NodeJS, enquanto o React Native é o Framework que está sendo utilizado para o desenvolvimento do aplicativo móvel multiplataforma com linguagem Typescript. O gerenciador do Banco de Dados escolhido pela equipe é o PostgresSQL.
 
 <table border="1">
     <tr>
