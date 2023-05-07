@@ -6,7 +6,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 
 | CENÁRIO  | CASO DE TESTE  | DESCRIÇÃO  | RESULTADO | 
 | ------------ | ------------ | ------------ | -------- |
-| 001 - LOGIN  |  CT01 - Login com e-mail inválido  |    Estando na tela de login; Quando preencher usuário e o email não for encontrado; O sistema deve exibir mensagem de erro “usuario não encontrado”  |O acesso ao sistema é nagado como previsto |
+| 001 - LOGIN  |  CT01 - Login com e-mail inválido  |    Estando na tela de login; Quando preencher usuário e o email não for encontrado; O sistema deve exibir mensagem de erro “usuario não encontrado”  |O acesso ao sistema é negado |
 | 001 - LOGIN  | CT02 - Login válido com email e senha  |  Estando na tela de login; Quando o usuário preecnher corretamente os seus dados de email e senha; Então o sistema o direcionará para a tela principal (Lista de treino);  | O acesso ao sistema está sendo autorizado com exito |
 | 002 - REGISTER  | CT03 - Preenchimento campos obrigatórios |  Caso os campos obrigatórios não sejam preenchidos a mensagem: “Preencha “todos os campos e tente novamente. será exibida ”. | Mensagem sendo exibida corretamente  |
 | 002 - REGISTER  | CT04 - Cadastro com email já existente | Ao tentar utilizar um e-mail já existente uma mensagem será exibida  “Este e-mail já está em uso. “.  | Mensagem sendo exibida corretamente  |
