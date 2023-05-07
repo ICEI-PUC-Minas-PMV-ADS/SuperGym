@@ -20,7 +20,7 @@ Objetivo: Avaliar se todos os campos de preenchimento são clicáveis e se o usu
 Objetivo: Verificar se ao preencher os campos, eles passam por validação e em caso positivo e garantem acesso as demais funções da plataforma ao usuário e no caso não passe pela validação informe ao usuário um erro na tela com o motivo do problema.
 
 - Caso de Teste 3: Teste do botão ESQUECI MINHA SENHA
-Objetivo: O usuário que esqueceu sua senha deve conseguir clicar neste botão e de maneira prática e segura deve redefinir sua senha.
+Objetivo: O usuário que esqueceu sua senha deve conseguir clicar neste botão e de maneira prática e segura poderá redefinir sua senha.
 
 - Caso de Teste 4: Teste do botão CADASTRE-SE
 Objetivo: O usuário recém chegado na plataforma deve poder clicar neste botão e acessar uma tela onde poderá preencher os dados.
