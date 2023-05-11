@@ -11,7 +11,7 @@ Objetivo: O botão deve redirecionar o usuário para uma tela onde ele possa efe
 
 ### Tela 2 Login
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/SuperGym/assets/103080396/36e80b01-242a-4957-ab29-c8e75cfaff76" />  
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/SuperGym/assets/103080396/36e80b01-242a-4957-ab29-c8e75cfaff76" width="400px" />  
 
 - Caso de Teste 1: Teste de usabilidade dos inputs do formulário do login
 Objetivo: Avaliar se todos os campos de preenchimento são clicáveis e se o usuário consegue preencher sem dificuldades.
@@ -24,7 +24,7 @@ Objetivo: O usuário recém chegado na plataforma deve poder clicar neste botão
 
 ### Tela 3 Cadastro
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/SuperGym/assets/103080396/4a3c0a46-78b7-4c53-86b7-f4650df7e4cd" />  
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/SuperGym/assets/103080396/4a3c0a46-78b7-4c53-86b7-f4650df7e4cd" width="400px"/>  
 
 - Caso de Teste 1: Teste do preenchimento e validação dos inputs do formulário
 Objetivo: Verificar se os campos podem ser preenchidos corretamente e se o preenchimento está sujeito a validações, para que o usuário não preencha com informações desconexas.
@@ -34,7 +34,7 @@ Objetivo: Ao clicar neste botão, o formulário deve ser verificado para que tod
 
 ### Tela 4 Home
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/SuperGym/assets/103080396/9e90fd32-5d32-4d55-9567-0ceb7f2100a1" />  
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/SuperGym/assets/103080396/9e90fd32-5d32-4d55-9567-0ceb7f2100a1" width="400px" />  
 
 - Caso de Teste 1: Teste do botão SAIR DO APP
 Objetivo: Avaliar se o botão responde adequadamente a função estabelecida.
@@ -47,7 +47,7 @@ Objetivo: Após inserido o nome do aluno que receberá o treino o usuário dever
 
 ### Tela 5 Modal Home
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/SuperGym/assets/103080396/f8f56493-bb47-4793-9a92-5374f5cc4f94" />  
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/SuperGym/assets/103080396/f8f56493-bb47-4793-9a92-5374f5cc4f94" width="400px" />  
 
 - Caso de Teste 1: O input deve pode ser de preenchido com um nome
 Objetivo: Permitir a inserção do nome do aluno que receberá a ficha de treino
@@ -57,7 +57,7 @@ Objetivo: Ao clicar neste botão, o input deverá estar preenchido e logo em seg
 
 ### Tela 6 Detalhes do Exercício
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/SuperGym/assets/103080396/f29ce2ea-6517-4003-9430-05c0fff1b4db" />  
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/SuperGym/assets/103080396/f29ce2ea-6517-4003-9430-05c0fff1b4db" width="400px" />  
 
 - Caso de Teste 1: Verificar as informações condizem com o exercício
 Objetivo: Ao selecionar um dos exercícios da home deverá ser apresentada esta tela onde haverão instruções sobre como o exercício deverá ser executado.
@@ -67,14 +67,14 @@ Objetivo: Verificar se ao ser clicado este botão, acrescenta o exercício em qu
 
 ### Tela 7 Selecionar Exercícios
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/SuperGym/assets/103080396/885c08aa-15a1-49af-a3eb-6888a4483a5e" /> 
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/SuperGym/assets/103080396/885c08aa-15a1-49af-a3eb-6888a4483a5e" width="400px" /> 
 
 - Caso de Teste 1: Botão CONFIRMAR TREINO
 Objetivo: O botão deve permanecer inativo (representado visualmente) e após o usuário selecionar ao menos 1 exercício o botão deverá ser habilitado para o usuário selecionar.
 
 ### Tela 8 Confirmação de Treino
 
-<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/SuperGym/assets/103080396/850fc6d0-a13c-4c8a-b381-776bff2830bd" />  
+<img src="https://github.com/ICEI-PUC-Minas-PMV-ADS/SuperGym/assets/103080396/850fc6d0-a13c-4c8a-b381-776bff2830bd" width="400px" />  
 
 - Caso de  Teste 1:
 Objetivo: Após finalizado o cadastro da ficha o usuário deverá receber confirmação visual e poder baixar o PDF do treino para compartilhar com qualquer usuário a ficha.
