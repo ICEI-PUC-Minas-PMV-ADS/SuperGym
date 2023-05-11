@@ -19,10 +19,7 @@ Objetivo: Avaliar se todos os campos de preenchimento são clicáveis e se o usu
 - Caso de Teste 2: Teste de  do botão ENTRAR
 Objetivo: Verificar se ao preencher os campos, eles passam por validação e em caso positivo e garantem acesso as demais funções da plataforma ao usuário e no caso não passe pela validação informe ao usuário um erro na tela com o motivo do problema.
 
-- Caso de Teste 3: Teste do botão ESQUECI MINHA SENHA
-Objetivo: O usuário que esqueceu sua senha deve conseguir clicar neste botão e de maneira prática e segura deve redefinir sua senha.
-
-- Caso de Teste 4: Teste do botão CADASTRE-SE
+- Caso de Teste 3: Teste do botão CADASTRE-SE
 Objetivo: O usuário recém chegado na plataforma deve poder clicar neste botão e acessar uma tela onde poderá preencher os dados.
 
 ### Tela 3 Cadastro
@@ -39,8 +36,8 @@ Objetivo: Ao clicar neste botão, o formulário deve ser verificado para que tod
 
 <img src="https://user-images.githubusercontent.com/103080396/227782236-b3a1caa0-409f-4737-a1b8-d830371bf6a3.jpg" />  
 
-- Caso de Teste 1: Teste de usabilidade da interface de navegação
-Objetivo: Avaliar se o menu de navegação superior entre as categorias alterna corretamente, apresentando os exercícios correspondentes de cada categoria.
+- Caso de Teste 1: Teste do botão SAIR DO APP
+Objetivo: Avaliar se o botão responde adequadamente a função estabelecida.
 
 - Caso de Teste 2: Teste de usabilidade do botão NOVO TREINO
 Objetivo: Ao clicar neste botão um modal deve ser apresentado onde será preenchido o nome do aluno.
@@ -72,10 +69,7 @@ Objetivo: Verificar se ao ser clicado este botão, acrescenta o exercício em qu
 
 <img src="https://user-images.githubusercontent.com/103080396/227782232-7f8d2bc3-df43-4e97-ab0f-b099fef496bd.jpg" /> 
 
-- Caso de Teste 1: Seleção dos exercícios
-Objetivo: O usuário deve ser capaz de alternar entre as categorias e selecionar quaisquer exercícios apresentados na tela. Podendo inserir todos eles, mas jamais inserir o mesmo exercício mais de uma vez.
-
-- Caso de Teste 2: Botão CONFIRMAR TREINO
+- Caso de Teste 1: Botão CONFIRMAR TREINO
 Objetivo: O botão deve permanecer inativo (representado visualmente) e após o usuário selecionar ao menos 1 exercício o botão deverá ser habilitado para o usuário selecionar.
 
 ### Tela 8 Confirmação de Treino
@@ -83,4 +77,4 @@ Objetivo: O botão deve permanecer inativo (representado visualmente) e após o 
 <img src="https://user-images.githubusercontent.com/103080396/227782241-741d17c9-61e5-4974-b4f8-34bc2a27c527.jpg" />  
 
 - Caso de  Teste 1:
-Objetivo: Após finalizado o cadastro da ficha o usuário deverá receber confirmação visual e poder compartilhar com qualquer usuário a ficha.
+Objetivo: Após finalizado o cadastro da ficha o usuário deverá receber confirmação visual e poder baixar o PDF do treino para compartilhar com qualquer usuário a ficha.
