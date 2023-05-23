@@ -11,7 +11,7 @@ import { FooterComponent } from '../../components/Footer';
 import { Categories } from '../../components/Categories';
 import { Exercises } from '../../components/Exercises';
 import { Cart } from '../../components/Cart';
-import { CATEGORIES_GET, EXERCISES_GET, TRAINING_CREATE, PDF_DOWNLOAD } from '../../services/api';
+import { CATEGORIES_GET, EXERCISES_GET, TRAINING_CREATE, PDF_DOWNLOAD, GET_EXERCISES_BY_CATEGORY } from '../../services/api';
 
 import {
   Container,
@@ -27,7 +27,6 @@ import { Exercise } from '../../types/Exercise';
 import { ActivityIndicator } from 'react-native';
 
 import { Category } from '../../types/Category';
-import { Text } from '../../components/Text';
 
 
 function Main() {
@@ -87,6 +86,22 @@ function Main() {
   function handleResetTraining() {
     setSelectedName('');
     setCartItems([]);
+  }
+
+  async function handleSelectCategory(categoryId: string) {
+    try {
+      if (user) {
+        const token = await AsyncStorage.getItem('Supergym:token');
+        const { url, options } = GET_EXERCISES_BY_CATEGORY({ categoryId, token });
+        const response = await fetch(url, options);
+        const json = await response.json();
+        setExercises(json);
+        setIsLoading(false);
+      }
+    }
+    catch (err) {
+      console.log(err);
+    }
   }
 
   async function handleCreateTraining() {
@@ -211,7 +226,9 @@ function Main() {
           {exercises.length > 0 || categories.length > 0 ? (
             <>
               <CategoriesContainer>
-                <Categories categories={categories} />
+                <Categories
+                  onSelectCategory={handleSelectCategory}
+                  categories={categories} />
               </CategoriesContainer>
               <ExercisesContainer>
                 <Exercises

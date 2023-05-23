@@ -98,4 +98,22 @@ export function PDF_DOWNLOAD({ trainingId, token }: DownloadPDFProps) {
   };
 }
 
+interface GetExercisesByCategory {
+  categoryId: string;
+  token: string | null;
+}
+
+export function GET_EXERCISES_BY_CATEGORY({ categoryId, token }: GetExercisesByCategory) {
+  return {
+    url: url + `/categories/${categoryId}/exercises`,
+    options: {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/pdf',
+        Authorization: 'Bearer ' + token,
+      },
+    },
+  };
+}
+
 export default api;
