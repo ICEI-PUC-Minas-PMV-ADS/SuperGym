@@ -1,0 +1,25 @@
+message: Please cite this software using these metadata.
+title: Supergym
+authors:
+  - family-names: Roberto Olympio Ferreira
+    given-names: Bruno
+  - family-names: Henrique Monteiro Cal
+    given-names: Guilherme
+  - family-names: Augusto Ferreira De lira
+    given-names: Gustavo
+  - family-names: Jordão De Noronha Picado
+    given-names: Rafael
+  - family-names: Ramos Berger
+    given-names: Lúcia Raquel
+  - family-names: Do Carmo Alves
+  - family-names: Warlen
+    - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Curcino De Lima
+    given-names: Mateus
+keywords:
+  Academia
+  Treino
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/SuperGym
+version: 1.0.0
+date-released: 2023-05-07
