@@ -1,55 +1,111 @@
 import React, { useState, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-import api from '../services/api';
+import api, { USER_AUTH, USER_CREATE } from '../services/api';
 
-import * as auth from '../services/auth';
 import { createContext } from 'react';
+
+import { ParamListBase, useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+
+interface User {
+  user_id: string;
+  user_email: string;
+  token: string
+}
+
 
 interface AuthContextData {
   signed: boolean;
-  user: object | null;
-  signIn(): Promise<void>;
+  user: User | null
+  signIn: (loginProps: LoginProps) => Promise<void>;
+  create: (createUserProps: CreateUserProps) => Promise<void>;
   logout(): void;
-  loading: boolean | null;
+  loading: boolean;
+  error: string;
+  setError: (error: string) => void;
 }
 
 interface Props {
   children: JSX.Element;
 }
 
+interface LoginProps {
+  email: string;
+  password: string;
+}
+
+interface CreateUserProps {
+  name: string;
+  email: string;
+  password: string;
+}
+
 const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 
 export function AuthProvider({ children }: Props) {
-  const [user, setUser] = useState<object | null>(null);
-  const [loading, setLoading] = useState<boolean | null>(null);
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState('');
+
+  const navigation = useNavigation<NativeStackNavigationProp<ParamListBase>>();
 
   useEffect(() => {
     async function loadStorageData() {
+
       const storagedUser = await AsyncStorage.getItem('Supergym:user');
       const storagedToken = await AsyncStorage.getItem('Supergym:token');
 
+      if (!storagedUser) setLoading(false);
+
       if (storagedToken && storagedUser) {
-        api.defaults.headers['Authorization'] = `Bearer ${storagedToken}`;
-        setUser(JSON.parse(storagedUser));
         setLoading(false);
+        api.defaults.headers['Authorization'] = `Bearer ${storagedToken}`;
+        setError('');
+        setUser(JSON.parse(storagedUser));
       }
     }
 
     loadStorageData();
   }, []);
 
-  async function signIn() {
-    const response = await auth.signIn();
+  async function signIn({ email, password }: LoginProps) {
+    setLoading(true);
+    const { url, options } = USER_AUTH({ email, password });
+    const response = await fetch(url, options);
+    const json = await response.json();
 
-    setUser(response.user);
+    const user = json.user;
+    const token = user ? user.token : undefined;
 
-    api.defaults.headers['Authorization'] = `Bearer ${response.token}`;
+    if (response.ok) {
+      setLoading(false);
+      setUser(user);
 
-    await AsyncStorage.setItem('Supergym:user', JSON.stringify(response.user));
-    await AsyncStorage.setItem('Supergym:token', JSON.stringify(response.token));
+      await AsyncStorage.setItem('Supergym:user', JSON.stringify(user));
+      await AsyncStorage.setItem('Supergym:token', token);
+      setError('');
+    } else {
+      setLoading(false);
+      setError(json.message);
+    }
+  }
 
-    console.log(response);
+  async function create({ name, email, password }: CreateUserProps) {
+    setLoading(true);
+    const { url, options } = USER_CREATE({ name, email, password });
+    const response = await fetch(url, options);
+    const json = await response.json();
+
+    if (response.ok) {
+      navigation.navigate('SignIn');
+      setLoading(false);
+      setError('');
+    } else {
+      setLoading(false);
+      setError(json.message);
+    }
+
   }
 
   function logout() {
@@ -57,7 +113,7 @@ export function AuthProvider({ children }: Props) {
   }
 
   return (
-    <AuthContext.Provider value={{ signed: Boolean(user), user, signIn, logout, loading }}>
+    <AuthContext.Provider value={{ signed: Boolean(user), user, signIn, create, logout, loading, error, setError }}>
       {children}
     </AuthContext.Provider>
   );

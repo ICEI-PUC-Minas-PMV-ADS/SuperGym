@@ -11,11 +11,21 @@ import { Button } from '../Button';
 interface ExerciseModalProps {
   visible: boolean;
   onClose: () => void;
-  exercise: Exercise | null
+  exercise: Exercise;
+  onAddToCart: (exercise: Exercise) => void;
 }
 
-export function ExerciseModal({ visible, onClose, exercise }: ExerciseModalProps) {
+export function ExerciseModal({ visible, onClose, exercise, onAddToCart }: ExerciseModalProps) {
   const instructions = exercise?.instructions;
+
+  if (!exercise) {
+    return null;
+  }
+
+  function handleAddToCart() {
+    onAddToCart(exercise);
+    onClose();
+  }
 
   return (
     <Modal
@@ -63,7 +73,7 @@ export function ExerciseModal({ visible, onClose, exercise }: ExerciseModalProps
 
       </ModalBody>
       <FooterComponent>
-        <Button onPress={() => alert('Adicionar exercicio')}>Adicionar exercício</Button>
+        <Button onPress={handleAddToCart}>Adicionar exercício</Button>
       </FooterComponent>
 
     </Modal>
